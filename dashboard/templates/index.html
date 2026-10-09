@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice AI A/B Testing & Auto-Rollout Engine</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="brand">
+        <h1>🎙️ Voice AI A/B Testing Engine</h1>
+        <div class="brand-subtitle">Automated Experimentation, Bayesian Winner Detection & Safe Auto-Rollouts</div>
+      </div>
+      <div>
+        <button class="btn btn-primary" onclick="openCreateModal()">+ New Experiment</button>
+      </div>
+    </header>
+
+    <!-- Top Selector Bar -->
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <label style="font-weight: 600; font-size: 0.9rem;">Active Experiment:</label>
+          <select id="experiment-selector" onchange="setActiveExperiment(this.value)" style="background: #0d1117; color: #fff; border: 1px solid var(--border-color); padding: 6px 12px; border-radius: 6px;">
+            {% for exp in experiments %}
+              <option value="{{ exp.id }}">{{ exp.name }} ({{ exp.status }})</option>
+            {% else %}
+              <option value="">No experiments yet (Click "+ New Experiment")</option>
+            {% endfor %}
+          </select>
+          <span id="selected-exp-label" style="font-family: monospace; font-size: 0.85rem; color: var(--color-accent);"></span>
+        </div>
+
+        <div class="action-bar" style="padding-top: 0;">
+          <button id="btn-run-sim" class="btn btn-secondary" onclick="triggerSimulator()">▶ Replay Sample Calls</button>
+          <button class="btn btn-primary" onclick="triggerDecisionEvaluation()">🤖 Evaluate Decision</button>
+          <button class="btn btn-success" onclick="updateStatus('PROMOTE_B')">🏆 Promote B</button>
+          <button class="btn btn-danger" onclick="updateStatus('STOP_EARLY')">🛑 Early Stop</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Performance Cards -->
+    <div class="grid-2">
+      <!-- Variant A (Control) -->
+      <div class="card" style="border-top: 3px solid var(--color-primary);">
+        <div class="card-title">
+          <span>Variant A: Control (Base Prompt)</span>
+          <span class="badge badge-draft">90% Traffic</span>
+        </div>
+        <div class="grid-2" style="margin-top: 14px;">
+          <div class="stat-box">
+            <div class="stat-label">Total Calls</div>
+            <div id="val-calls-a" class="stat-value">0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Meetings Fixed</div>
+            <div id="val-meetings-a" class="stat-value" style="color: var(--color-success);">0</div>
+          </div>
+        </div>
+        <div class="grid-2" style="margin-top: 14px;">
+          <div class="stat-box">
+            <div class="stat-label">Conversion Rate</div>
+            <div id="val-rate-a" class="stat-value">0.0%</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Avg Duration</div>
+            <div id="val-duration-a" class="stat-value">0.0s</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variant B (Challenger) -->
+      <div class="card" style="border-top: 3px solid var(--color-purple);">
+        <div class="card-title">
+          <span>Variant B: Challenger (Test Prompt)</span>
+          <span class="badge badge-concluded">10% Traffic</span>
+        </div>
+        <div class="grid-2" style="margin-top: 14px;">
+          <div class="stat-box">
+            <div class="stat-label">Total Calls</div>
+            <div id="val-calls-b" class="stat-value">0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Meetings Fixed</div>
+            <div id="val-meetings-b" class="stat-value" style="color: var(--color-success);">0</div>
+          </div>
+        </div>
+        <div class="grid-2" style="margin-top: 14px;">
+          <div class="stat-box">
+            <div class="stat-label">Conversion Rate</div>
+            <div id="val-rate-b" class="stat-value">0.0%</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Avg Duration</div>
+            <div id="val-duration-b" class="stat-value">0.0s</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Traffic Split & Guardrail Monitoring -->
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-title">Traffic Split Accuracy</div>
+        <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 12px;">
+          <div style="text-align: center;">
+            <div class="stat-label">Configured</div>
+            <div id="val-conf-split" style="font-size: 1.3rem; font-weight: 700; color: var(--color-accent);">10% B</div>
+          </div>
+          <div style="font-size: 1.5rem; color: var(--text-muted);">vs</div>
+          <div style="text-align: center;">
+            <div class="stat-label">Achieved</div>
+            <div id="val-ach-split" style="font-size: 1.3rem; font-weight: 700;">0.0% B</div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 12px;">
+          <span id="split-alignment-badge" class="badge badge-running">CHECKING...</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Secondary Guardrail</div>
+        <div style="text-align: center; margin-top: 10px;">
+          <div class="stat-label">Call Duration Metric</div>
+          <div style="margin-top: 8px;">
+            <span id="guardrail-badge" class="badge badge-running">SAFE</span>
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 10px;">
+            Limit: Max +30s increase over control.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span>Winner Confidence</span>
+          <span id="val-p-win" style="font-family: monospace; font-size: 0.8rem; color: var(--color-accent);">P(B > A) = 0.50</span>
+        </div>
+        <div class="meter-container">
+          <div id="meter-confidence-fill" class="meter-fill" style="width: 50%;">50%</div>
+          <div class="threshold-marker" style="left: 95%;" title="95% Win Threshold"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
+          <span>0%</span>
+          <span style="color: var(--color-warning);">▲ 95% Threshold</span>
+          <span>100%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/js/dashboard.js"></script>
+  <script>
+    async function openCreateModal() {
+      const name = prompt("Enter Experiment Name:", "Voice Bot Pitch Test v2");
+      if (!name) return;
+
+      const payload = {
+        name: name,
+        description: "Testing Challenger prompt on 10% slice",
+        base_prompt: "You are an assistant representing IndiaMART. Help customer book meetings.",
+        window_hours: 48,
+        min_sample_per_variant: 10,
+        confidence_level: 0.95,
+        variants: [
+          {
+            key: "A",
+            name: "Control",
+            content: "You are an assistant representing IndiaMART. Help customer book meetings.",
+            traffic_weight: 0.90
+          },
+          {
+            key: "B",
+            name: "Challenger",
+            content: "You are a friendly senior advisor at IndiaMART. Emphasize value before booking meeting.",
+            traffic_weight: 0.10
+          }
+        ]
+      };
+
+      const res = await fetch("/api/experiments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      if (res.ok) {
+        alert("Experiment created! Starting it now...");
+        const exp = await res.json();
+        await fetch(`/api/experiments/${exp.id}/status`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action: "START" })
+        });
+        window.location.reload();
+      } else {
+        const err = await res.json();
+        alert("Failed creating experiment: " + JSON.stringify(err));
+      }
+    }
+  </script>
+</body>
+</html>
