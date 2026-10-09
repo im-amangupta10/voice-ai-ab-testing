@@ -10,6 +10,7 @@ from db.repository import ExperimentRepository
 from api.routes.experiments import router as experiments_router
 from api.routes.metrics_ws import ws_router
 from simulator.replayer import CSVReplaySimulator
+from api.routes.prompts import router as prompts_router
 
 app = FastAPI(
     title="Voice AI A/B Testing & Auto-Rollout Engine",
@@ -25,6 +26,7 @@ def startup_event():
 # Routers
 app.include_router(experiments_router, prefix="/api")
 app.include_router(ws_router)
+app.include_router(prompts_router, prefix="/api")
 
 # Template & Static mounting
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

@@ -12,6 +12,7 @@ from core.experiment import (
 )
 from core.metrics import MetricsCollector
 from core.decision import DecisionEngine
+from core.prompts import generate_challenger_prompt
 
 router = APIRouter(prefix="/experiments", tags=["Experiments"])
 
@@ -25,6 +26,16 @@ def create_experiment(payload: ExperimentCreate, db: Session = Depends(get_db)):
         raise HTTPException(status_code=400, detail=f"Experiment with ID '{exp_id}' already exists.")
 
     variants_data = [v.model_dump() for v in payload.variants]
+    variant_keys = {variant["key"].upper() for variant in variants_data}
+    if "B" not in variant_keys:
+        variants_data.append({
+            "key": "B",
+            "name": "Challenger (generated)",
+            "variant_type": "FULL_PROMPT",
+            "content": generate_challenger_prompt(payload.base_prompt, seed=exp_id),
+            "traffic_weight": 0.10,
+        })
+        variants_data[0]["traffic_weight"] = 0.90
     exp = repo.create_experiment(
         exp_id=exp_id,
         name=payload.name,

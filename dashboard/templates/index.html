@@ -155,14 +155,47 @@
 
   <script src="/static/js/dashboard.js"></script>
   <script>
+    async function chooseBasePrompt() {
+      const useUpload = confirm("Upload the original VANI prompt file?\n\nChoose Cancel to paste a prompt instead.");
+      if (!useUpload) {
+        const pasted = prompt("Paste the base prompt (Variant A):", "");
+        return pasted ? pasted.trim() : "";
+      }
+
+      const picker = document.createElement("input");
+      picker.type = "file";
+      picker.accept = ".docx,.txt,.md";
+      return new Promise((resolve) => {
+        picker.onchange = async () => {
+          const file = picker.files && picker.files[0];
+          if (!file) return resolve("");
+          const form = new FormData();
+          form.append("file", file);
+          try {
+            const res = await fetch("/api/prompts/extract", { method: "POST", body: form });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.detail || "Prompt extraction failed");
+            resolve(data.prompt);
+          } catch (err) {
+            alert(err.message);
+            resolve("");
+          }
+        };
+        picker.click();
+      });
+    }
+
     async function openCreateModal() {
       const name = prompt("Enter Experiment Name:", "Voice Bot Pitch Test v2");
       if (!name) return;
 
+      const basePrompt = await chooseBasePrompt();
+      if (!basePrompt) return;
+
       const payload = {
         name: name,
         description: "Testing Challenger prompt on 10% slice",
-        base_prompt: "You are an assistant representing IndiaMART. Help customer book meetings.",
+        base_prompt: basePrompt,
         window_hours: 48,
         min_sample_per_variant: 10,
         confidence_level: 0.95,
@@ -170,14 +203,8 @@
           {
             key: "A",
             name: "Control",
-            content: "You are an assistant representing IndiaMART. Help customer book meetings.",
-            traffic_weight: 0.90
-          },
-          {
-            key: "B",
-            name: "Challenger",
-            content: "You are a friendly senior advisor at IndiaMART. Emphasize value before booking meeting.",
-            traffic_weight: 0.10
+            content: basePrompt,
+            traffic_weight: 1.0
           }
         ]
       };
@@ -188,7 +215,7 @@
         body: JSON.stringify(payload)
       });
       if (res.ok) {
-        alert("Experiment created! Starting it now...");
+        alert("Experiment created with your prompt as A and a generated challenger prompt as B. Starting it now...");
         const exp = await res.json();
         await fetch(`/api/experiments/${exp.id}/status`, {
           method: "PATCH",

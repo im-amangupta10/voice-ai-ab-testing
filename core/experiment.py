@@ -27,7 +27,7 @@ class ExperimentCreate(BaseModel):
     name: str = Field(..., min_length=3, description="Descriptive experiment title")
     description: Optional[str] = None
     base_prompt: str = Field(..., description="Original baseline prompt")
-    variants: List[VariantCreate] = Field(..., min_length=2, max_length=2, description="Variant A (control) & Variant B (challenger)")
+    variants: List[VariantCreate] = Field(..., min_length=1, max_length=2, description="Variant A and optional Variant B challenger")
     
     window_hours: int = Field(default=48, ge=1, description="Duration in hours to run test")
     min_sample_per_variant: int = Field(default=100, ge=5, description="Minimum calls required per variant before declaring winner")
@@ -40,8 +40,8 @@ class ExperimentCreate(BaseModel):
     @model_validator(mode="after")
     def validate_variants_and_weights(self):
         keys = [v.key.upper() for v in self.variants]
-        if "A" not in keys or "B" not in keys:
-            raise ValueError("Experiment must define exactly Variant 'A' and Variant 'B'.")
+        if len(keys) != len(set(keys)) or "A" not in keys or any(key not in {"A", "B"} for key in keys):
+            raise ValueError("Experiment must define Variant 'A' and optionally Variant 'B'.")
         
         total_weight = sum(v.traffic_weight for v in self.variants)
         if abs(total_weight - 1.0) > 0.001:

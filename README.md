@@ -58,3 +58,11 @@ becomes `275890790`), preserves the original disposition, marks `BL Enriched`,
 `BL Approved`, and `BL Generated` as successful outcomes, and derives a
 minute-resolution duration from `entered_on` and `last_modified_date`.
 The generated `data/sample_calls.csv` is then replayed by the dashboard endpoint.
+
+### 5. Add prompts from the dashboard
+
+When creating an experiment, choose **Upload** and select the original `.docx`
+prompt (or upload a `.txt`/`.md` file). The server extracts the prompt as
+Variant A and automatically creates a reproducible Variant B by adding two
+controlled challenger instructions. Both complete prompt versions are stored
+with the experiment and are available for a future Sarvam agent replay.
