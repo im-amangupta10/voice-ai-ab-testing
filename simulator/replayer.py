@@ -22,14 +22,16 @@ class CSVReplaySimulator:
 
     def load_historical_calls(self, csv_filepath: str) -> List[Dict[str, Any]]:
         calls = []
-        with open(csv_filepath, mode="r", encoding="utf-8") as f:
+        with open(csv_filepath, mode="r", encoding="utf-8-sig", newline="") as f:
             reader = csv.DictReader(f)
             for row in reader:
+                duration = row.get("call_duration_sec") or "60"
                 calls.append({
                     "call_id": row.get("call_id"),
                     "caller_id": str(row.get("caller_id")),
-                    "call_duration_sec": float(row.get("call_duration_sec", 60.0)),
+                    "call_duration_sec": float(duration),
                     "disposition": row.get("disposition", "NO_ANSWER"),
+                    "meeting_fixed": int(row.get("meeting_fixed") or 0),
                 })
         return calls
 
@@ -51,7 +53,9 @@ class CSVReplaySimulator:
 
         disposition = call_data["disposition"]
         duration = call_data["call_duration_sec"]
-        meeting_fixed = 1 if disposition.upper() == "MEETING_FIXED" else 0
+        # Prefer the normalized outcome flag from the IndiaMART parser.  The
+        # raw disposition is retained for reporting and need not be renamed.
+        meeting_fixed = int(call_data.get("meeting_fixed", 0))
 
         # Lift simulation for Variant B (simulating Challenger prompt)
         if variant_key == "B":

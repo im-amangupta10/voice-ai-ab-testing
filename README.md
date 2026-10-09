@@ -43,3 +43,18 @@ API documentation is available at **[http://localhost:8000/docs](http://localhos
 2. Click **"▶ Replay Sample Calls"** to simulate incoming calls through the deterministic router.
 3. Observe live metric updates for Variant A vs Variant B and the confidence meter.
 4. Click **"🤖 Evaluate Decision"** to run the automated statistical rule engine.
+
+### 4. Replay the IndiaMART export
+
+Convert the attached IndiaMART call log into the simulator schema:
+
+```bash
+python3 data/process_indiamart_csv.py \
+  /path/to/Call_Logs_Hackathon.csv data/sample_calls.csv
+```
+
+The converter normalizes spreadsheet-style IDs (for example, `275890790.0`
+becomes `275890790`), preserves the original disposition, marks `BL Enriched`,
+`BL Approved`, and `BL Generated` as successful outcomes, and derives a
+minute-resolution duration from `entered_on` and `last_modified_date`.
+The generated `data/sample_calls.csv` is then replayed by the dashboard endpoint.

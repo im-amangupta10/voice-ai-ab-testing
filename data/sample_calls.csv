@@ -1,26 +1,1001 @@
-call_id,caller_id,call_duration_sec,disposition,timestamp
-C001,9876543210,142,MEETING_FIXED,2026-10-09T09:00:00Z
-C002,9123456789,67,NO_ANSWER,2026-10-09T09:05:00Z
-C003,8801234567,203,MEETING_FIXED,2026-10-09T09:12:00Z
-C004,7712345678,88,CALLBACK,2026-10-09T09:15:00Z
-C005,9934567890,31,DECLINED,2026-10-09T09:20:00Z
-C006,8856789012,178,MEETING_FIXED,2026-10-09T09:25:00Z
-C007,7723456789,52,NO_ANSWER,2026-10-09T09:30:00Z
-C008,9845678901,115,CALLBACK,2026-10-09T09:35:00Z
-C009,8967890123,244,MEETING_FIXED,2026-10-09T09:40:00Z
-C010,7701234567,77,DECLINED,2026-10-09T09:45:00Z
-C011,9812345678,189,MEETING_FIXED,2026-10-09T09:50:00Z
-C012,8823456789,43,NO_ANSWER,2026-10-09T09:55:00Z
-C013,7734567890,156,MEETING_FIXED,2026-10-09T10:00:00Z
-C014,9978901234,99,CALLBACK,2026-10-09T10:05:00Z
-C015,8890123456,61,DECLINED,2026-10-09T10:10:00Z
-C016,7745678901,210,MEETING_FIXED,2026-10-09T10:15:00Z
-C017,9856789012,38,NO_ANSWER,2026-10-09T10:20:00Z
-C018,8867890123,134,MEETING_FIXED,2026-10-09T10:25:00Z
-C019,7778901234,82,CALLBACK,2026-10-09T10:30:00Z
-C020,9889012345,167,MEETING_FIXED,2026-10-09T10:35:00Z
-C021,9823456789,122,MEETING_FIXED,2026-10-09T10:40:00Z
-C022,9134567890,45,NO_ANSWER,2026-10-09T10:45:00Z
-C023,8812345678,190,MEETING_FIXED,2026-10-09T10:50:00Z
-C024,7723456780,105,CALLBACK,2026-10-09T10:55:00Z
-C025,9945678901,55,DECLINED,2026-10-09T11:00:00Z
+call_id,caller_id,call_duration_sec,disposition,meeting_fixed,recording_url
+91100778,110434458,60.0,No Enrichment Scope,0,
+91046386,52549412,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/GMPLKMGJ5.mp3
+91100781,58641089,60.0,No Enrichment Scope,0,
+91100782,142662506,60.0,No Enrichment Scope,0,
+91264711,103273998,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/WXHNXU7L5.mp3
+91211373,275985737,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/PVDMLRSK5.mp3
+91100784,254801852,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/ZCXR33YJ5.mp3
+91046391,226511350,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/F01SKMGJ5.mp3
+91100779,275890763,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/JRFN33YJ5.mp3
+91211377,88361997,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/9K8PLRSK5.mp3
+91156538,257220890,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/WIVMISCK5.mp3
+91211379,130013960,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/4HVPLRSK5.mp3
+91156541,38669910,60.0,Queue Drop,0,
+91156540,275939081,120.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/F9PPISCK5.mp3
+91156529,111090915,2040.0,Technical Issue - Call Not Connected,0,
+91156530,126328297,2040.0,Technical Issue - Call Not Connected,0,
+91211383,187620072,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/MJ0XLRSK5.mp3
+91156545,115423071,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/ZBVWISCK5.mp3
+91156531,275938723,2400.0,Technical Issue - Call Not Connected,0,
+91156546,275939443,60.0,Job Related_BL Not Approved,0,https://squadiq-call-recs.s3.amazonaws.com/U8GXISCK5.mp3
+91156542,246345736,2280.0,Technical Issue - Call Not Connected,0,
+91156547,156738385,1860.0,Technical Issue - Call Not Connected,0,
+91156554,275713959,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/6KI8JSCK5.mp3
+91156556,121726955,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/F4LBJSCK5.mp3
+91156557,121726955,60.0,Manual Call,0,https://squadiq-call-recs.s3.amazonaws.com/A18CJSCK5.mp3
+91156560,31756938,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/PMNEJSCK5.mp3
+91156561,275940574,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/9DIGJSCK5.mp3
+91156564,275940860,60.0,Call Forwarded - API Timeout,0,
+91156562,73693627,1800.0,Technical Issue - Call Not Connected,0,
+91156568,53169414,120.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/3MFLJSCK5.mp3
+91156572,29708793,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/C6IPJSCK5.mp3
+91156575,13163549,60.0,No Enrichment Scope,0,
+91156566,275940968,2040.0,Technical Issue - Call Not Connected,0,
+91156577,275941129,120.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/LPKTJSCK5.mp3
+91156578,275941135,360.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/GL7UJSCK5.mp3
+91264712,237865876,2040.0,Queue Drop,0,
+91156532,247360483,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/X6JIISCK5.mp3
+91046387,99505777,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/BJBMKMGJ5.mp3
+91211375,25814336,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/JS0NLRSK5.mp3
+91211378,71124660,60.0,BL Generated,1,http://180.188.255.89:82/monitor/20261007/IN-2093-8048208589-20261007-235844-1791397724.1498308.WAV
+91100780,275890597,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/EM2P33YJ5.mp3
+91211376,48933926,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/ENLNLRSK5.mp3
+91100783,180550110,60.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/4GAR33YJ5.mp3
+91100785,4615565,60.0,No Enrichment Scope,0,
+91156534,74685513,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/L0TJISCK5.mp3
+91046388,275844352,180.0,Job Related_BL Not Approved,0,https://squadiq-call-recs.s3.amazonaws.com/1DJNKMGJ5.mp3
+91211380,275962193,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/UA3SLRSK5.mp3
+91156535,275938901,120.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/GXDKISCK5.mp3
+91046390,275844352,120.0,Job Related_BL Not Approved,0,https://squadiq-call-recs.s3.amazonaws.com/K3ERKMGJ5.mp3
+91046389,21221681,2220.0,Queue Drop,0,
+91156537,249184847,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/1M8MISCK5.mp3
+91100793,110434458,60.0,No Enrichment Scope,0,
+91100789,275890809,2220.0,Technical Issue - Call Not Connected,0,
+91211384,249433373,1980.0,Queue Drop,0,
+91156539,257220890,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/RFGNISCK5.mp3
+91156543,256469650,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/PTSTISCK5.mp3
+91156544,115423071,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/4F8WISCK5.mp3
+91156533,275938774,2280.0,Technical Issue - Call Not Connected,0,
+91156536,24465288,2100.0,Technical Issue - Call Not Connected,0,
+91156550,275713959,300.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/CBL3JSCK5.mp3
+91156551,275713959,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/LVN6JSCK5.mp3
+91156552,97357805,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/GSA7JSCK5.mp3
+91156553,275713959,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/BNX7JSCK5.mp3
+91156548,20809844,2400.0,Technical Issue - Call Not Connected,0,
+91156549,44369280,2160.0,Queue Drop,0,
+91156555,121726955,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/K70BJSCK5.mp3
+91156558,121726955,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/5YUCJSCK5.mp3
+91156559,262871792,2160.0,Queue Drop,0,
+91156563,275940811,60.0,Call Forwarded - API Timeout,0,
+91156565,275940873,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/IXKJJSCK5.mp3
+91100787,275890797,120.0,No Product Requirement,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/b931c465-23:33:56-e7de81fc&audio_hash=merged_audio
+91211374,157994185,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/38af62d8-23:57:19-d0f91d47&audio_hash=merged_audio
+91211381,148482599,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/8YIULRSK5.mp3
+91100788,94723912,60.0,Technical Issue,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/0353bade-23:34:07-8c41fab4&audio_hash=merged_audio
+91229172,274087979,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/D7RV11YK5.mp3
+91156567,275940968,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/8RUKJSCK5.mp3
+91174097,275954848,60.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/EETS8YGK5.mp3
+91173965,184394480,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/1BW2XWGK5.mp3
+91229152,74228637,180.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/Y3B0X0YK5.mp3
+91100794,275890826,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/8XZU33YJ5.mp3
+91229242,14177058,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/X2C6Y1YK5.mp3
+91229069,272562185,240.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/VWUD70YK5.mp3
+91174052,40023455,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/ABKUYXGK5.mp3
+91063255,133541317,240.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/BEZITGLJ5.mp3
+91229114,113826901,180.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/9RI5J0YK5.mp3
+91100791,36902953,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/8e50a80a-23:33:44-030c1327&audio_hash=merged_audio
+91264714,183503280,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/FMCRXU7L5.mp3
+91174107,65535893,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/1PJMBYGK5.mp3
+91229049,114332093,240.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/DR3700YK5.mp3
+91173843,57394933,300.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/L2PYVVGK5.mp3
+91229260,271355459,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/21b1b79e-12:45:47-89d62fd2&audio_hash=merged_audio
+91264717,185874913,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/5GKSXU7L5.mp3
+91229216,109820606,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/J8VDL1YK5.mp3
+91229317,210825895,60.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/IANJW2YK5.mp3
+91207724,user_95,60.0,No Information,0,
+91264713,275975098,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/KRRPXU7L5.mp3
+91264722,115673026,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/P6FUXU7L5.mp3
+91264723,276031777,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/J32VXU7L5.mp3
+91264725,276031934,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/NIRYXU7L5.mp3
+91264720,115673026,1860.0,Technical Issue - Call Not Connected,0,
+91046392,275844352,120.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/AXLSKMGJ5.mp3
+91063433,55953728,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/VPJUVILJ5.mp3
+91063418,275859541,120.0,Abruptly Disconnected Call,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/6792409b-12:36:59-b612e3f2&audio_hash=merged_audio
+91156570,275940968,120.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/MCANJSCK5.mp3
+91063529,72750313,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/PZCUTJLJ5.mp3
+91100804,227430470,60.0,No Enrichment Scope,0,
+91264715,220425861,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/c5a5e0d0-23:57:37-40d75173&audio_hash=merged_audio
+91100805,142662506,60.0,No Enrichment Scope,0,
+91100807,197502764,60.0,No Enrichment Scope,0,
+91063296,77604873,240.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/Z95X4HLJ5.mp3
+91264719,276031846,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/0D7TXU7L5.mp3
+91063538,129379720,60.0,Particular Company Details,0,https://squadiq-call-recs.s3.amazonaws.com/JALAWJLJ5.mp3
+91156571,275940968,240.0,Manual Call,0,https://squadiq-call-recs.s3.amazonaws.com/H9XNJSCK5.mp3
+91100810,75240892,60.0,No Enrichment Scope,0,
+91264716,276031816,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/a5fd247b-23:58:58-73d46793&audio_hash=merged_audio
+91100799,48076692,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/TLUW33YJ5.mp3
+91264721,216879163,60.0,No Enrichment Scope,0,
+91156573,275940968,120.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/735RJSCK5.mp3
+91156574,275940968,360.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/20SRJSCK5.mp3
+91156576,108235140,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/XWCSJSCK5.mp3
+91100813,273592624,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/X2I043YJ5.mp3
+91100815,user_122,60.0,Foreign or Disabled Users,0,
+91100816,user_123,60.0,Foreign or Disabled Users,0,
+91100814,100378207,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/SZ4143YJ5.mp3
+91156579,275941129,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/BIUUJSCK5.mp3
+91100820,164046868,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/GTC243YJ5.mp3
+91156580,184683353,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/6FFVJSCK5.mp3
+91156581,199747646,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/R5AXJSCK5.mp3
+91100811,275890837,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/76c3d314-23:37:25-73f7081b&audio_hash=merged_audio
+91100808,117521006,2040.0,Technical Issue - Call Not Connected,0,
+91156584,62541303,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/AW4ZJSCK5.mp3
+91156583,62541303,2340.0,Queue Drop,0,
+91208208,user_133,60.0,No Information,0,
+91156569,29708793,180.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/TFNMJSCK5.mp3
+91211385,247910250,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/7AVYLRSK5.mp3
+91229389,161302333,60.0,No Enrichment Scope,0,
+91264718,37283476,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/67f029db-23:58:32-ecfb1b9e&audio_hash=merged_audio
+91046393,275843475,2280.0,Queue Drop,0,
+91156589,147391132,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/JE72KSCK5.mp3
+91100796,129066595,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/3UKV33YJ5.mp3
+91229433,151422686,60.0,BL Generated,1,http://180.188.255.89:82/monitor/20261008/IN-2042-9650920179-20261008-124739-1791443859.1534576.WAV
+91100797,275890694,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/469c0da0-23:35:19-4e083ae5&audio_hash=merged_audio
+91117924,25534758,60.0,No Enrichment Scope,0,
+91229435,42536822,60.0,No Enrichment Scope,0,
+91156590,3170336,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/EBU2KSCK5.mp3
+91156591,3170336,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/98F3KSCK5.mp3
+91156592,147391132,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/4524KSCK5.mp3
+91156593,275941424,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/Z1N4KSCK5.mp3
+91156594,114647962,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/UY95KSCK5.mp3
+91156582,62541303,2340.0,Technical Issue - Call Not Connected,0,
+91156585,62541303,2280.0,Queue Drop,0,
+91156586,62541303,2280.0,Technical Issue - Call Not Connected,0,
+91156597,12133039,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/1e67fb48-06:00:30-bed2cf8c&audio_hash=merged_audio
+91156595,122915839,2280.0,Technical Issue - Call Not Connected,0,
+91100792,237402689,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/D0DU33YJ5.mp3
+91100786,275890790,180.0,Call Forwarded - No Product,0,
+91100819,258385979,60.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/LWR143YJ5.mp3
+91211386,70446816,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/X330MRSK5.mp3
+91264726,190411290,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/IFCZXU7L5.mp3
+91117842,116466071,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/R1DM343K5.mp3
+91046394,275641561,360.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/VLGUKMGJ5.mp3
+91156588,268823073,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/PHK1KSCK5.mp3
+91117781,35552385,120.0,No Product Requirement,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261006/8ed4bc5a-12:32:35-632fa283&audio_hash=merged_audio
+91117851,124936391,60.0,No Product Requirement,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261006/0e73083f-12:33:25-13b2e5ab&audio_hash=merged_audio
+91211388,110906015,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/BRI2MRSK5.mp3
+91264731,190411290,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/MW13YU7L5.mp3
+91156596,274109752,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/8KR7KSCK5.mp3
+91156587,23423102,2040.0,Queue Drop,0,
+91156598,200554914,60.0,Foreign or Disabled Users,0,
+91264733,276032106,240.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/7LW4YU7L5.mp3
+91211391,user_171,60.0,Call Forwarded,0,
+91046402,275844852,60.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/IT00LMGJ5.mp3
+91211389,275932307,120.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/6M53MRSK5.mp3
+91211390,58343671,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/1JS3MRSK5.mp3
+91046405,275844797,1860.0,Technical Issue - Call Not Connected,0,
+91046404,275844889,2040.0,Technical Issue - Call Not Connected,0,
+91264740,225122990,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/FH9CYU7L5.mp3
+91264738,79813905,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/WSEAYU7L5.mp3
+91046406,204621277,2160.0,Queue Drop,0,
+91264741,225122990,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/5BHDYU7L5.mp3
+91264724,115673026,2220.0,Technical Issue - Call Not Connected,0,
+91264742,276032489,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/084EYU7L5.mp3
+91264743,276032489,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/V4REYU7L5.mp3
+91264744,87832997,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/ZJEIYU7L5.mp3
+91264745,276031961,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/UG1JYU7L5.mp3
+91264734,47198425,1920.0,Technical Issue - Call Not Connected,0,
+91264746,276032753,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/IA9KYU7L5.mp3
+91264736,160633561,2340.0,Queue Drop,0,
+91264727,276031846,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/DCZZXU7L5.mp3
+91156602,15921105,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/TAK9KSCK5.mp3
+91156601,275941501,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/YDZ8KSCK5.mp3
+91211387,275986264,300.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/GUX1MRSK5.mp3
+91156599,249581766,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/3HC8KSCK5.mp3
+91229262,117904734,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/3039b536-12:45:47-541fb66c&audio_hash=merged_audio
+91156608,264190119,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/fb371822-06:04:20-248e9ed8&audio_hash=merged_audio
+91156616,134573164,60.0,Abruptly Disconnected Call,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/12274071-06:08:37-b05c16c0&audio_hash=merged_audio
+91229281,276002172,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/ZYYCG2YK5.mp3
+91046396,243176682,1980.0,Queue Drop,0,
+91156614,16690758,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/GG4FKSCK5.mp3
+91156634,275941639,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/NPTSKSCK5.mp3
+91229225,99040774,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/YG5NP1YK5.mp3
+91156640,143163392,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/237438d1-06:23:07-8bbb0a3e&audio_hash=merged_audio
+91100798,195460903,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/YP7W33YJ5.mp3
+91156657,94946482,60.0,Selling Related,0,https://squadiq-call-recs.s3.amazonaws.com/GB12LSCK5.mp3
+91100802,142662506,60.0,No Enrichment Scope,0,
+91156692,34512174,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/53122cd6-06:39:01-b58594cb&audio_hash=merged_audio
+91156697,275941773,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/HULILSCK5.mp3
+91100803,39738299,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/CCNY33YJ5.mp3
+91100801,87353734,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/HF2Y33YJ5.mp3
+91100812,user_210,60.0,Foreign or Disabled Users,0,
+91100800,141317817,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/MIFX33YJ5.mp3
+91100817,275890928,60.0,Foreign or Disabled Users,0,
+91100809,272525306,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/26XZ33YJ5.mp3
+91100822,226751572,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/6LK343YJ5.mp3
+91100806,275822916,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/a3d3eee7-23:38:27-07031396&audio_hash=merged_audio
+91211382,275984585,1320.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/YRSVLRSK5.mp3
+91100790,275890790,120.0,BL Limit Exhausted,0,http://180.188.255.89:82/monitor/20261005/IN-2080-8048208382-20261005-233343-1791223423.1301508.WAV
+91229392,38583126,60.0,Enrichment Screen,0,http://180.188.255.89:82/monitor/20261008/IN-2069-8148941382-20261008-124720-1791443840.1534517.WAV
+91117774,87609046,120.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/9JY2F33K5.mp3
+91156603,110718355,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/M77AKSCK5.mp3
+91117836,133203728,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261006/f5294c21-12:32:59-acafe7d6&audio_hash=merged_audio
+91117804,125702059,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261006/eda3c941-12:33:06-ed2b68df&audio_hash=merged_audio
+91156605,264190119,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/C1FBKSCK5.mp3
+91117557,235462014,300.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/S3KIG03K5.mp3
+91264728,276031961,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/89K0YU7L5.mp3
+91264729,276031964,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/3671YU7L5.mp3
+91264732,148463321,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/HTM3YU7L5.mp3
+91264737,160633561,120.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/6Z69YU7L5.mp3
+91264739,276032489,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/KKMBYU7L5.mp3
+91264730,276031983,2040.0,Queue Drop,0,
+91264735,47198425,1920.0,Technical Issue - Call Not Connected,0,
+91264747,276032954,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/314MYU7L5.mp3
+91264748,276032935,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/YXPMYU7L5.mp3
+91264750,65239795,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/7GTRYU7L5.mp3
+91264753,65193339,1980.0,Queue Drop,0,
+91264752,41576505,2400.0,Technical Issue - Call Not Connected,0,
+91264755,276033649,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/A9TZYU7L5.mp3
+91264756,276033660,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/56E0ZU7L5.mp3
+91264758,276033651,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/PW82ZU7L5.mp3
+91264761,25777123,2220.0,Technical Issue - Call Not Connected,0,
+91264760,26483788,2400.0,Queue Drop,0,
+91264764,187651939,2400.0,Technical Issue - Call Not Connected,0,
+91264766,276034400,60.0,Selling Related,0,https://squadiq-call-recs.s3.amazonaws.com/28BDZU7L5.mp3
+91264768,100036845,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/S1JEZU7L5.mp3
+91264769,100036845,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/LY5FZU7L5.mp3
+91264772,208556465,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/KAGJZU7L5.mp3
+91264774,276034677,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/0YXLZU7L5.mp3
+91100795,254047049,300.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/96a65165-23:34:44-7673257b&audio_hash=merged_audio
+91100821,186748067,60.0,No Product Requirement,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/53122cd6-23:39:21-91ef4837&audio_hash=merged_audio
+91264749,238873985,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/MRYNYU7L5.mp3
+91100818,109852770,240.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/9fbd27ff-23:38:30-050acf13&audio_hash=merged_audio
+91100826,242311126,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/9863e6d7-23:40:52-9136be7b&audio_hash=merged_audio
+91046398,263405917,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/Z26YKMGJ5.mp3
+91137289,275920083,60.0,No Information,0,
+91264751,276033169,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/S6MTYU7L5.mp3
+91211392,275986452,120.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/RC05MRSK5.mp3
+91046399,275844797,60.0,Call Forwarded - No Product,0,
+91211394,52428469,60.0,No Information,0,
+91264754,224754428,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/FC6ZYU7L5.mp3
+91156606,275941511,60.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/7Y1CKSCK5.mp3
+91046401,user_261,60.0,Foreign or Disabled Users,0,
+91211395,27325899,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/U50DMRSK5.mp3
+91264757,276033672,60.0,Call Forwarded - API Timeout,0,
+91211397,275986818,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/HBIIMRSK5.mp3
+91264759,276033868,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/ZEB5ZU7L5.mp3
+91211400,221364485,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/BKFNMRSK5.mp3
+91046403,11558222,120.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/3IV1LMGJ5.mp3
+91046400,52614012,1980.0,Technical Issue - Call Not Connected,0,
+91046397,232929914,2400.0,Technical Issue - Call Not Connected,0,
+91264762,276034064,60.0,Call Forwarded - API Timeout,0,
+91211401,221364485,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/WAARMRSK5.mp3
+91211396,275986634,2100.0,Technical Issue - Call Not Connected,0,
+91211402,275987244,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/VMKVMRSK5.mp3
+91211406,275987494,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/2X97NRSK5.mp3
+91211408,275987494,120.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/6CZANRSK5.mp3
+91211411,202668377,60.0,No Enrichment Scope,0,
+91211415,275987491,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/PE4HNRSK5.mp3
+91211418,275987805,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/95ZINRSK5.mp3
+91211424,111193730,2040.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/H1CSNRSK5.mp3
+91264763,198903298,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/8ZD8ZU7L5.mp3
+91264765,276034233,2220.0,Queue Drop,0,
+91046395,275844659,1980.0,Queue Drop,0,
+91046407,275845472,120.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/GHL8LMGJ5.mp3
+91046408,275845500,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/BE89LMGJ5.mp3
+91156600,275941474,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/dcf4557f-06:01:29-e83853b5&audio_hash=merged_audio
+91100823,user_286,60.0,Foreign or Disabled Users,0,
+91211393,158902776,60.0,Job Related_BL Not Approved,0,https://squadiq-call-recs.s3.amazonaws.com/JLX9MRSK5.mp3
+91264767,276034438,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/X4YDZU7L5.mp3
+91156604,136648715,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/H4UAKSCK5.mp3
+91046409,272084904,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/R1PBLMGJ5.mp3
+91264770,276034516,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/BSDGZU7L5.mp3
+91156607,94159087,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-53f0274b-4d2a&interaction_id=20261007/028f0344-06:03:44-79204f11&audio_hash=merged_audio
+91264771,194193087,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/RDVIZU7L5.mp3
+91211398,266035769,120.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/C85JMRSK5.mp3
+91264773,146963997,120.0,Language Barrier,0,https://squadiq-call-recs.s3.amazonaws.com/51BLZU7L5.mp3
+91046411,138717227,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/5N5ELMGJ5.mp3
+91211399,221364485,2220.0,Technical Issue - Call Not Connected,0,
+91264775,222878272,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/VUIMZU7L5.mp3
+91264776,191843040,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/EJDPZU7L5.mp3
+91046412,274003771,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/0KSELMGJ5.mp3
+91046410,138717227,1920.0,Technical Issue - Call Not Connected,0,
+91264786,134879031,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/I03UZU7L5.mp3
+91046414,275846302,120.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/94VHLMGJ5.mp3
+91211405,275987491,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/70N6NRSK5.mp3
+91211407,275987494,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/SPH8NRSK5.mp3
+91046417,80171833,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/IMXKLMGJ5.mp3
+91211410,202668377,60.0,No Enrichment Scope,0,
+91211412,202668377,60.0,No Enrichment Scope,0,
+91046419,275846566,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/8G5MLMGJ5.mp3
+91046420,275846566,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/Y9DNLMGJ5.mp3
+91211404,90946149,1980.0,Queue Drop,0,
+91211409,131526276,2220.0,Queue Drop,0,
+91211413,275987688,1920.0,Technical Issue - Call Not Connected,0,
+91211403,275987260,2160.0,Technical Issue - Call Not Connected,0,
+91264777,29191251,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-53f0274b-4d2a&interaction_id=20261009/77a4ddc5-06:00:26-83e0d427&audio_hash=merged_audio
+91046413,275846037,2160.0,Technical Issue - Call Not Connected,0,
+91211414,275987491,120.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/0LWFNRSK5.mp3
+91211447,22816630,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/G8JHPRSK5.mp3
+91211450,147568953,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/1ZDJPRSK5.mp3
+91211453,265083050,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/KN8LPRSK5.mp3
+91211466,67145467,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/4SDTPRSK5.mp3
+91211465,60705468,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/f20c51b3-06:15:26-a4d58e8f&audio_hash=merged_audio
+91156609,275941486,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/2VMCKSCK5.mp3
+91156611,136648715,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/SMWDKSCK5.mp3
+91211463,131377565,300.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/EY5SPRSK5.mp3
+91156612,251857688,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/b1b4290c-06:07:12-340d1467&audio_hash=merged_audio
+91211471,275988865,60.0,No Product Requirement,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-53f0274b-4d2a&interaction_id=20261008/64ce2437-06:17:43-1c304390&audio_hash=merged_audio
+91100825,100510637,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/WEU443YJ5.mp3
+91100827,213505661,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/RBF543YJ5.mp3
+91100824,182340426,1860.0,Queue Drop,0,
+91137937,1159386,60.0,No Information,0,
+91137938,10768935,60.0,No Information,0,
+91046415,59746972,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/ZX2JLMGJ5.mp3
+91264778,193673550,60.0,No Enrichment Scope,0,
+91211416,275987491,120.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/JBRHNRSK5.mp3
+91264780,276034595,60.0,No Enrichment Scope,0,
+91264779,276034872,120.0,Abruptly Disconnected Call,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/e349ab3e-06:06:31-6894b78e&audio_hash=merged_audio
+91264782,25457719,60.0,No Enrichment Scope,0,
+91100835,user_339,60.0,Foreign or Disabled Users,0,
+91211417,275987805,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/E8CINRSK5.mp3
+91156613,54140008,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/LJHEKSCK5.mp3
+91156610,275941536,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/XR9DKSCK5.mp3
+91100840,180975094,60.0,No Enrichment Scope,0,
+91264783,222364801,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/Z98SZU7L5.mp3
+91211419,56938224,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/ZY6KNRSK5.mp3
+91100831,275891012,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/08c5642b-23:42:01-cc89ca2d&audio_hash=merged_audio
+91211420,75826908,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/UVTKNRSK5.mp3
+91100828,275891005,240.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/K82643YJ5.mp3
+91264785,276034923,60.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/N3GTZU7L5.mp3
+91211421,275987916,1860.0,Technical Issue - Call Not Connected,0,
+91211423,275987916,2940.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/3EWNNRSK5.mp3
+91211429,275988486,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/P914PRSK5.mp3
+91211434,275988693,120.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/8C6APRSK5.mp3
+91211435,275366959,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/MZLCPRSK5.mp3
+91211431,160650719,1980.0,Technical Issue - Call Not Connected,0,
+91211438,251826637,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/2L3FPRSK5.mp3
+91211433,163475266,1980.0,Technical Issue - Call Not Connected,0,
+91211425,275988102,60.0,Call Forwarded - API Timeout,0,
+91100830,user_359,60.0,Foreign or Disabled Users,0,
+91100832,275890520,60.0,No Enrichment Scope,0,
+91211422,75826908,2940.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/8H9NNRSK5.mp3
+91046416,73963047,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/UUNJLMGJ5.mp3
+91211440,265083050,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/XHPFPRSK5.mp3
+91211443,275988779,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/SEBGPRSK5.mp3
+91211448,55927483,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/B56IPRSK5.mp3
+91264781,247809626,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/4DLRZU7L5.mp3
+91211444,42774333,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/LBYGPRSK5.mp3
+91100834,5124583,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/A2A743YJ5.mp3
+91211477,273081639,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/34PXPRSK5.mp3
+91046425,9673820,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/7UFSLMGJ5.mp3
+91046418,89948013,2340.0,Technical Issue - Call Not Connected,0,
+91211476,275988816,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/873XPRSK5.mp3
+91229159,245012896,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/R994Z0YK5.mp3
+91264784,275333041,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/U6VSZU7L5.mp3
+91229256,227405098,120.0,Abruptly Disconnected Call,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/096d0a4e-12:45:46-bb76bbad&audio_hash=merged_audio
+91100838,67515793,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/0WH843YJ5.mp3
+91100833,128466583,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/70dcd273-23:42:11-f880e1cc&audio_hash=merged_audio
+91046432,86489548,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/RWKYLMGJ5.mp3
+91046435,275846858,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/ALF0MMGJ5.mp3
+91100837,275891025,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/7f0820ae-23:44:48-bb010949&audio_hash=merged_audio
+91046428,275846736,2400.0,Technical Issue - Call Not Connected,0,
+91100852,275890814,60.0,No Enrichment Scope,0,
+91100845,256390250,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/EHZA43YJ5.mp3
+91100850,11953879,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/U4FD43YJ5.mp3
+91100836,274262206,240.0,Call Forwarded - No Product,0,
+91100843,274262206,240.0,BL Limit Exhausted,0,http://180.188.255.89:82/monitor/20261005/IN-2080-7942787866-20261005-234338-1791224018.1301516.WAV
+91100829,275890837,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/F5N643YJ5.mp3
+91211426,275988102,2220.0,Technical Issue - Call Not Connected,0,
+91046421,275846566,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/T60PLMGJ5.mp3
+91156617,54140008,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/17ZGKSCK5.mp3
+91046422,275846566,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/M3LPLMGJ5.mp3
+91211427,275988333,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/AMJ1PRSK5.mp3
+91211428,141929046,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/VCE3PRSK5.mp3
+91156619,275941570,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/W3KHKSCK5.mp3
+91264789,276034841,120.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/MFSXZU7L5.mp3
+91211430,141929046,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/J6M4PRSK5.mp3
+91156620,113361651,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/KXTIKSCK5.mp3
+91156618,151029333,240.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/2b3e77b5-06:09:58-622ced43&audio_hash=merged_audio
+91046423,275846588,1980.0,Technical Issue - Call Not Connected,0,
+91156621,275758491,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/FUEJKSCK5.mp3
+91211432,81149335,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/IIY8PRSK5.mp3
+91264796,276034875,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/XZU00V7L5.mp3
+91264797,276034948,60.0,No Enrichment Scope,0,
+91046426,50140808,1860.0,Technical Issue - Call Not Connected,0,
+91046427,50140808,2160.0,Queue Drop,0,
+91046429,275846754,2220.0,Technical Issue - Call Not Connected,0,
+91156622,194426530,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/5MMKKSCK5.mp3
+91117934,213576004,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/UYHDF53K5.mp3
+91156625,275941226,60.0,No Enrichment Scope,0,
+91156626,250424754,60.0,No Enrichment Scope,0,
+91211437,15571426,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/7PGEPRSK5.mp3
+91156627,137081479,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/J94NKSCK5.mp3
+91156623,40796525,2100.0,Queue Drop,0,
+91211439,275980206,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/bebf1165-06:01:11-431c66ed&audio_hash=merged_audio
+91211442,275932358,60.0,No Enrichment Scope,0,
+91211436,33788055,2040.0,Queue Drop,0,
+91156615,274978567,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/BDRFKSCK5.mp3
+91211441,187793520,60.0,No Enrichment Scope,0,
+91046424,9673820,2220.0,Technical Issue - Call Not Connected,0,
+91264792,275943318,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/C90ZZU7L5.mp3
+91100844,275890713,60.0,No Product Requirement,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/62d8450a-23:43:43-76ed7190&audio_hash=merged_audio
+91063607,user_422,60.0,No Information,0,
+91100842,275891044,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/PNR943YJ5.mp3
+91100847,275890754,60.0,No Enrichment Scope,0,
+91063611,user_425,60.0,No Information,0,http://180.188.255.89:82/monitor/20261005/IN-2094-8035341045-20261005-123910-1791184150.1243827.WAV
+91100841,159507858,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/7e61bcfd-23:43:34-75532e26&audio_hash=merged_audio
+91100848,9707156,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/4B7C43YJ5.mp3
+91063624,40694488,60.0,BL Generated,1,http://180.188.255.89:82/monitor/20261005/IN-2011-9913399216-20261005-123918-1791184158.1243852.WAV
+91100849,204568763,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/Z7UC43YJ5.mp3
+91100854,275890984,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/197237de-23:45:42-aa2f00c4&audio_hash=merged_audio
+91100846,275891077,180.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/9EKB43YJ5.mp3
+91100856,181531413,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/DV9F43YJ5.mp3
+91100867,101226297,60.0,No Enrichment Scope,0,
+91100858,249166564,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/8SWF43YJ5.mp3
+91100870,101226297,60.0,No Enrichment Scope,0,
+91100862,275891132,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/e8fec1ff-23:47:18-a8beca09&audio_hash=merged_audio
+91100866,187276396,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/96a65165-23:47:54-30f12a5d&audio_hash=merged_audio
+91100874,275889383,60.0,Abruptly Disconnected Call,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/ac0e92e3-23:49:23-f965afff&audio_hash=merged_audio
+91100869,249166564,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/C7KJ43YJ5.mp3
+91100872,181531413,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/21UK43YJ5.mp3
+91100857,149820786,240.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/02bb239a-23:47:47-0be00cde&audio_hash=merged_audio
+91100879,275890694,60.0,No Enrichment Scope,0,
+91100839,124498738,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/VS4943YJ5.mp3
+91100875,49825511,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/139d4eb1-23:50:55-b389fe2b&audio_hash=merged_audio
+91264790,55409311,60.0,No Product Requirement,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/47a9a401-06:12:02-647dd9b3&audio_hash=merged_audio
+91264788,191843040,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/TI5XZU7L5.mp3
+91100876,28983066,180.0,No Product Requirement,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/5f75d649-23:50:23-9c5628e6&audio_hash=merged_audio
+91100895,275891296,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/be93c6df-23:56:25-1030e6ff&audio_hash=merged_audio
+91100896,227843803,120.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/R6CS43YJ5.mp3
+91046431,273068857,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/WZZXLMGJ5.mp3
+91264791,276034910,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/HCDYZU7L5.mp3
+91117806,237877048,120.0,Abruptly Disconnected Call,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261006/458be3b2-12:32:34-3e5dcc67&audio_hash=merged_audio
+91117879,43651069,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/WACLJ43K5.mp3
+91264793,15992929,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/76LZZU7L5.mp3
+91264799,144024015,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/21f30c3b-06:16:40-69505b08&audio_hash=merged_audio
+91117801,267353965,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261006/7fe4c3da-12:33:10-1fbf90ca&audio_hash=merged_audio
+91046434,275846858,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/FPUZLMGJ5.mp3
+91117714,33800577,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/ZZBFL23K5.mp3
+91264803,264842636,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/6IX30V7L5.mp3
+91117847,84473366,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/B9U6443K5.mp3
+91156624,275769678,240.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/96448db7-06:15:43-2938dc81&audio_hash=merged_audio
+91117344,11231084,480.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/HL84DY2K5.mp3
+91211449,275930184,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/62TIPRSK5.mp3
+91046440,246377444,60.0,No Enrichment Scope,0,
+91117785,255657258,120.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/MH2KJ33K5.mp3
+91046438,275846950,60.0,Abruptly Disconnected Call,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/4467abf6-06:03:06-dff498b1&audio_hash=merged_audio
+91046436,104948401,2280.0,Technical Issue - Call Not Connected,0,
+91264787,275988582,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/3RXVZU7L5.mp3
+91156628,275934080,120.0,Technical Issue,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/f1666e58-06:18:10-f4dbc3c2&audio_hash=merged_audio
+91211446,161433906,60.0,No Enrichment Scope,0,
+91100851,235689021,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/N12E43YJ5.mp3
+91264794,273585398,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/120aff7c-06:13:46-ae59a601&audio_hash=merged_audio
+91211445,122316177,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/8edfa496-06:03:57-b308ceee&audio_hash=merged_audio
+91100853,275891085,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/IYME43YJ5.mp3
+91046446,104948401,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/DEF8MMGJ5.mp3
+91100855,137994484,60.0,No Enrichment Scope,0,
+91211451,275988723,240.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/WV0KPRSK5.mp3
+91046449,79920371,60.0,No Enrichment Scope,0,
+91100863,275891140,60.0,Selling Related,0,https://squadiq-call-recs.s3.amazonaws.com/TGRH43YJ5.mp3
+91100860,204568763,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/3NHG43YJ5.mp3
+91100868,275890814,60.0,No Enrichment Scope,0,
+91100864,275891100,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/MDCI43YJ5.mp3
+91100865,275891153,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/HAZI43YJ5.mp3
+91100859,275822916,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/fb371822-23:47:08-5c6cf93c&audio_hash=merged_audio
+91100871,120258772,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/747K43YJ5.mp3
+91100861,275891129,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/YJ4H43YJ5.mp3
+91100877,197404192,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/SU1M43YJ5.mp3
+91100878,5826169,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/LRMM43YJ5.mp3
+91100883,243662412,60.0,No Enrichment Scope,0,
+91100885,118353498,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/6GHP43YJ5.mp3
+91100891,75240892,60.0,No Enrichment Scope,0,
+91100884,113543242,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/944c535c-23:53:44-ffc45fd3&audio_hash=merged_audio
+91100893,269813771,60.0,No Enrichment Scope,0,
+91100889,148600404,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/c9ee24c6-23:54:21-bb566b76&audio_hash=merged_audio
+91100894,150723968,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/W9RR43YJ5.mp3
+91100873,129730066,1860.0,Queue Drop,0,
+91100882,183960835,2280.0,Queue Drop,0,
+91156630,194426530,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/40ZPKSCK5.mp3
+91264795,276034962,60.0,Manual Call,0,https://squadiq-call-recs.s3.amazonaws.com/23800V7L5.mp3
+91156629,275941626,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/93CPKSCK5.mp3
+91046441,104948401,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/ZSZ5MMGJ5.mp3
+91211452,91200130,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/RSLKPRSK5.mp3
+91264802,274059922,60.0,No Enrichment Scope,0,
+91046442,275846935,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/UNK6MMGJ5.mp3
+91046439,235367227,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/c5a5e0d0-06:03:11-9dfdf6d0&audio_hash=merged_audio
+91264800,275988582,120.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/GPN20V7L5.mp3
+91100880,275403196,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/GM9N43YJ5.mp3
+91264798,114844400,2040.0,Technical Issue - Call Not Connected,0,
+91100881,239166339,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/3cdc697c-23:51:56-a4ff2458&audio_hash=merged_audio
+91100890,270291538,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/d012847f-23:54:22-671dc8ba&audio_hash=merged_audio
+91100886,250085877,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/cd982197-23:53:40-7157b161&audio_hash=merged_audio
+91100892,275891078,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/271cb4c1-23:55:00-beddcd30&audio_hash=merged_audio
+91100887,275891291,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/1D4R43YJ5.mp3
+91100888,231082078,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/a04aa5ab-23:54:19-319df5ab&audio_hash=merged_audio
+91100900,114716382,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/5UTU43YJ5.mp3
+91100897,275891129,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/K3ZS43YJ5.mp3
+91100902,275891370,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/0REV43YJ5.mp3
+91100903,275891384,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/VL1W43YJ5.mp3
+91100905,6250828,1860.0,Technical Issue - Call Not Connected,0,
+91100899,250624308,1980.0,Technical Issue - Call Not Connected,0,
+91156632,275941284,60.0,Foreign or Disabled Users,0,
+91211455,275988807,60.0,Foreign or Disabled Users,0,
+91156631,275941653,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/ZWJRKSCK5.mp3
+91100901,157717764,60.0,Queue Drop,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/2485add1-23:57:43-b2617625&audio_hash=merged_audio
+91046448,69930314,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/38N9MMGJ5.mp3
+91100904,275891337,60.0,BL Generated,1,http://180.188.255.89:82/monitor/20261005/IN-2080-8048208330-20261005-235855-1791224935.1301528.WAV
+91264801,253205502,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/BLA30V7L5.mp3
+91100898,250911528,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/F0KT43YJ5.mp3
+91046447,234243764,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/8B29MMGJ5.mp3
+91211457,253583962,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/AHGMPRSK5.mp3
+91156636,275941674,60.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/DI1UKSCK5.mp3
+91264807,274156041,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-53f0274b-4d2a&interaction_id=20261009/3999640b-06:19:05-4ce5a5dd&audio_hash=merged_audio
+91046450,104860835,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/43d1f203-06:06:45-80b05451&audio_hash=merged_audio
+91100906,60649131,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/JF9X43YJ5.mp3
+91264811,276034984,60.0,No Enrichment Scope,0,
+91046452,39345976,60.0,No Enrichment Scope,0,
+91211454,275988806,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/6044a4e2-06:08:52-dff0aada&audio_hash=merged_audio
+91264812,275779638,60.0,No Enrichment Scope,0,
+91156642,81703159,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/3C9VKSCK5.mp3
+91211456,185603043,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/FKVLPRSK5.mp3
+91100909,275891337,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/Z2RZ43YJ5.mp3
+91100910,275891409,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/UZB053YJ5.mp3
+91100913,275891603,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/3IE353YJ5.mp3
+91100908,157752385,2160.0,Technical Issue - Call Not Connected,0,
+91100917,275891700,1980.0,Technical Issue - Call Not Connected,0,
+91100920,39995226,2280.0,Technical Issue - Call Not Connected,0,
+91100919,107645237,2340.0,Technical Issue - Call Not Connected,0,
+91046445,223789389,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/IHU7MMGJ5.mp3
+91264805,189737692,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/1FI40V7L5.mp3
+91100907,79216411,60.0,Queue Drop,0,
+91046437,275846947,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/4WC5MMGJ5.mp3
+91211459,274036280,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/0BPNPRSK5.mp3
+91046444,137053486,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/ac0e92e3-06:04:33-f5aea953&audio_hash=merged_audio
+91046443,78202809,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/2c7661b6-06:04:12-6ff9c283&audio_hash=merged_audio
+91211458,274036280,120.0,Abruptly Disconnected Call,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/5fbf49b2-06:11:34-dacfb5c0&audio_hash=merged_audio
+91046467,109383388,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/WUWIMMGJ5.mp3
+91046468,37188084,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/RRHJMMGJ5.mp3
+91156637,94159087,60.0,No Enrichment Scope,0,
+91100911,275891551,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/NWY053YJ5.mp3
+91156638,181426645,60.0,No Enrichment Scope,0,
+91100912,275891603,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/DP6253YJ5.mp3
+91156633,252248214,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/UT6SKSCK5.mp3
+91156639,15180045,60.0,No Enrichment Scope,0,
+91211464,275220211,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/43d4c8c4-06:14:28-d1c2eca0&audio_hash=merged_audio
+91100914,275891551,60.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/YE1453YJ5.mp3
+91100915,275891603,60.0,Call Forwarded - API Timeout,0,
+91100916,275891603,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/M89553YJ5.mp3
+91100918,275891551,300.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/7Z3753YJ5.mp3
+91100922,271595798,360.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/LKJ953YJ5.mp3
+91100926,274334239,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/181C53YJ5.mp3
+91100930,275891956,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/0KBG53YJ5.mp3
+91100932,216548823,2280.0,Technical Issue - Call Not Connected,0,
+91156635,114778904,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/ILETKSCK5.mp3
+91264804,276034979,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/c268c5b4-06:18:04-180000d5&audio_hash=merged_audio
+91211461,275988811,60.0,No Enrichment Scope,0,
+91156651,250036804,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/7TYYKSCK5.mp3
+91211462,275942028,60.0,Foreign or Disabled Users,0,
+91100921,275891820,120.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/SNY853YJ5.mp3
+91264809,276034997,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/R8S50V7L5.mp3
+91156662,275941773,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/B8M2LSCK5.mp3
+91100923,275891873,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/GH6A53YJ5.mp3
+91156695,275941832,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/T0EHLSCK5.mp3
+91264810,140427966,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/K5D60V7L5.mp3
+91100924,107256485,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/BETA53YJ5.mp3
+91211460,236230716,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/P4YPPRSK5.mp3
+91100931,275891931,60.0,Language Barrier,0,https://squadiq-call-recs.s3.amazonaws.com/VGYG53YJ5.mp3
+91046455,234243764,60.0,Abruptly Disconnected Call,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/99aa6c5c-06:11:21-36c86e76&audio_hash=merged_audio
+91156700,59600503,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/0953eb2c-06:41:12-5c52fa50&audio_hash=merged_audio
+91046453,275847013,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/df5cf146-06:11:05-39d838d0&audio_hash=merged_audio
+91117766,221475612,120.0,Selling Related,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261006/322ce4fa-12:32:47-566d5af7&audio_hash=merged_audio
+91117731,28184809,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261006/1137b3e2-12:32:06-9449aef1&audio_hash=merged_audio
+91175020,49270362,120.0,Particular Company Details,0,https://squadiq-call-recs.s3.amazonaws.com/00I377HK5.mp3
+91117735,275882002,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261006/ccae08ec-12:31:39-6c54ffbc&audio_hash=merged_audio
+91046451,272461596,1920.0,Technical Issue - Call Not Connected,0,
+91117448,272568745,420.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/803VCZ2K5.mp3
+91117809,79516149,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/3BANR33K5.mp3
+91117880,266433706,60.0,Abruptly Disconnected Call,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261006/6103a082-12:34:18-a2665051&audio_hash=merged_audio
+91117873,90491167,60.0,Selling Related,0,https://squadiq-call-recs.s3.amazonaws.com/NM1UG43K5.mp3
+91264808,187535637,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/193d918f-06:20:12-04838ce7&audio_hash=merged_audio
+91046430,86489548,2220.0,Technical Issue - Call Not Connected,0,
+91046433,100229598,2100.0,Queue Drop,0,
+91264806,276034438,600.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/WB550V7L5.mp3
+91156641,275758844,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/8FMUKSCK5.mp3
+91046459,4765171,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/SD7FMMGJ5.mp3
+91211467,206244794,60.0,No Product Requirement,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/dc29ac5c-06:15:51-21121055&audio_hash=merged_audio
+91046460,213152565,180.0,BL Approved,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/9b5d09b9-06:18:43-84063d7c&audio_hash=merged_audio
+91046464,274177040,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/B42HMMGJ5.mp3
+91046480,275831412,60.0,No Product Requirement,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/89de77a5-06:27:46-06c9dabe&audio_hash=merged_audio
+91063398,223653641,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/Y1TAFILJ5.mp3
+91156646,187427215,60.0,Particular Company Details,0,https://squadiq-call-recs.s3.amazonaws.com/HZPXKSCK5.mp3
+91156645,275941667,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/M24XKSCK5.mp3
+91100925,275563631,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/6BEB53YJ5.mp3
+91211472,126888845,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/IDVVPRSK5.mp3
+91100928,275891931,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/KYVD53YJ5.mp3
+91100929,275891954,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/5NPF53YJ5.mp3
+91211473,275988867,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/8d457b80-06:17:33-8a7370b7&audio_hash=merged_audio
+91156654,246960234,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/XK60LSCK5.mp3
+91211475,250668244,1980.0,Technical Issue - Call Not Connected,0,
+91100927,275891931,1920.0,Technical Issue - Call Not Connected,0,
+91156656,225173359,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/LEE1LSCK5.mp3
+91156659,134057118,60.0,No Enrichment Scope,0,
+91156653,248602812,1920.0,Queue Drop,0,
+91156647,271421062,60.0,No Enrichment Scope,0,
+91264813,276034174,180.0,Call Forwarded - No Product,0,
+91100934,40936439,60.0,Call Forwarded - No Product,0,
+91046454,249457234,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/HV4CMMGJ5.mp3
+91264816,276035045,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/VNF90V7L5.mp3
+91046456,118478463,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/b2c31562-06:12:00-79b2c181&audio_hash=merged_audio
+91156644,275941687,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/T5HWKSCK5.mp3
+91100936,209283513,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/NRVL53YJ5.mp3
+91046457,106490268,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/CSRCMMGJ5.mp3
+91156649,271421062,60.0,No Enrichment Scope,0,
+91156648,81703159,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/CWBYKSCK5.mp3
+91100933,253501824,2280.0,Queue Drop,0,
+91046458,275847042,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/XGKEMMGJ5.mp3
+91156650,138117198,60.0,No Enrichment Scope,0,
+91211469,5253738,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/UJLUPRSK5.mp3
+91211470,209242767,1980.0,Technical Issue - Call Not Connected,0,
+91156643,250451246,2160.0,Technical Issue - Call Not Connected,0,
+91100937,275892291,2160.0,Queue Drop,0,
+91100940,186421033,2040.0,Technical Issue - Call Not Connected,0,
+91046462,274177040,60.0,Abruptly Disconnected Call,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/e64f7cc7-06:21:47-b87163da&audio_hash=merged_audio
+91046461,275847066,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/LAUFMMGJ5.mp3
+91100942,275382984,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/RW5063YJ5.mp3
+91100944,271851633,60.0,No Enrichment Scope,0,
+91100943,275893289,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/AL0263YJ5.mp3
+91100945,275893289,60.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/5IL263YJ5.mp3
+91100948,85951731,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/J53563YJ5.mp3
+91100941,275893176,2160.0,Technical Issue - Call Not Connected,0,
+91100947,85951731,2100.0,Technical Issue - Call Not Connected,0,
+91100935,275840084,1920.0,Technical Issue - Call Not Connected,0,
+91156652,275941726,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/5c3973b4-06:27:41-f09ac502&audio_hash=merged_audio
+91211474,183760737,60.0,Queue Drop,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-53f0274b-4d2a&interaction_id=20261008/c91d1949-06:17:46-685834fd&audio_hash=merged_audio
+91100938,275892507,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/H0TS53YJ5.mp3
+91264818,136983458,60.0,No Enrichment Scope,0,
+91156655,275941742,60.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/SHT0LSCK5.mp3
+91100939,275892596,60.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/2RLU53YJ5.mp3
+91264815,111765628,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/0TU80V7L5.mp3
+91046465,240999830,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/61NHMMGJ5.mp3
+91156661,275907754,60.0,No Enrichment Scope,0,
+91156664,275907754,60.0,No Enrichment Scope,0,
+91156658,205641081,120.0,Particular Company Details,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/e5a66a3e-06:30:25-0caf0cbf&audio_hash=merged_audio
+91156667,275941776,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/RV35LSCK5.mp3
+91156671,275941687,60.0,No Enrichment Scope,0,
+91117966,183799679,60.0,No Enrichment Scope,0,
+91156668,275941669,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/2058ce92-06:31:55-dba4540e&audio_hash=merged_audio
+91156675,275919366,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/0E68LSCK5.mp3
+91156680,121358604,60.0,No Enrichment Scope,0,
+91156670,275941757,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/6a15cb07-06:34:48-0f0a9d58&audio_hash=merged_audio
+91156685,user_670,60.0,Foreign or Disabled Users,0,
+91156673,275941753,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/AKY6LSCK5.mp3
+91156686,user_672,60.0,Foreign or Disabled Users,0,
+91156679,41897240,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/J41ALSCK5.mp3
+91156687,144484729,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/UM3DLSCK5.mp3
+91156684,95716864,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/ZRGCLSCK5.mp3
+91156689,28602094,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/IGBELSCK5.mp3
+91156690,275941852,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/DDYELSCK5.mp3
+91156688,275941846,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/NJPDLSCK5.mp3
+91264814,276034923,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/5W780V7L5.mp3
+91211468,275988859,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/ZM0UPRSK5.mp3
+91100946,79834342,2340.0,Technical Issue - Call Not Connected,0,
+91264819,276001441,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/JHNA0V7L5.mp3
+91264820,189737692,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/9BXB0V7L5.mp3
+91264817,276035047,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/PK2A0V7L5.mp3
+91100949,275893599,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/E2P563YJ5.mp3
+91046466,112151578,2220.0,Technical Issue - Call Not Connected,0,
+91264821,197432142,300.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/48IC0V7L5.mp3
+91264877,276035252,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/3FR31V7L5.mp3
+91264878,276035304,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/YBC41V7L5.mp3
+91264881,118948034,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/a2f64e68-06:50:06-931cc2c3&audio_hash=merged_audio
+91264899,192379713,180.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/ANEF1V7L5.mp3
+91264898,276035370,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/FSTE1V7L5.mp3
+91264905,111698353,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/7435e8bf-06:56:08-6d60b45d&audio_hash=merged_audio
+91264929,276035409,240.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/5116a9f8-07:02:16-231d01fd&audio_hash=merged_audio
+91156666,275941774,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/WYG4LSCK5.mp3
+91264953,275749701,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/V8642V7L5.mp3
+91100952,274504756,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/UN5863YJ5.mp3
+91100950,62219397,2100.0,Technical Issue - Call Not Connected,0,
+91100951,62219397,2040.0,Technical Issue - Call Not Connected,0,
+91156660,275941603,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/d3b659b5-06:30:48-ea744fca&audio_hash=merged_audio
+91100953,137336002,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/8BLA63YJ5.mp3
+91156663,257129637,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/6593LSCK5.mp3
+91156665,99649538,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/12W3LSCK5.mp3
+91156669,275919366,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/KSP5LSCK5.mp3
+91100956,274590061,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/T1GC63YJ5.mp3
+91100954,148065511,2280.0,Technical Issue - Call Not Connected,0,
+91100955,274590061,2040.0,Technical Issue - Call Not Connected,0,
+91100957,148312477,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/MY2D63YJ5.mp3
+91264822,276034979,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/Z45D0V7L5.mp3
+91211478,275983444,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/Y0BYPRSK5.mp3
+91156676,184279958,60.0,No Enrichment Scope,0,
+91156672,229487260,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/FNB6LSCK5.mp3
+91264830,197432142,60.0,No Enrichment Scope,0,
+91264828,121391676,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/da60e719-06:29:50-a4234bc3&audio_hash=merged_audio
+91100958,57907344,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/7NXE63YJ5.mp3
+91156674,130434298,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/5HJ7LSCK5.mp3
+91264825,29191251,360.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/f79dd724-06:27:06-19c88dfd&audio_hash=merged_audio
+91264832,144024015,60.0,No Enrichment Scope,0,
+91100960,212466351,60.0,Language Barrier,0,https://squadiq-call-recs.s3.amazonaws.com/LADH63YJ5.mp3
+91156682,275941776,60.0,Queue Drop,0,
+91264837,252990234,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/MANI0V7L5.mp3
+91264836,244843212,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/TD2I0V7L5.mp3
+91156677,230876675,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/VAT8LSCK5.mp3
+91264833,267151783,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/62edc930-06:33:21-3ab2d860&audio_hash=merged_audio
+91156681,275941815,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/E1MALSCK5.mp3
+91156678,249096284,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/P7E9LSCK5.mp3
+91264844,276035139,60.0,No Enrichment Scope,0,
+91264847,user_728,60.0,Foreign or Disabled Users,0,
+91156694,227207585,60.0,Queue Drop,0,
+91264850,276035128,60.0,Selling Related,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-53f0274b-4d2a&interaction_id=20261009/33f4f268-06:41:05-82df874c&audio_hash=merged_audio
+91264851,276035199,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/W62S0V7L5.mp3
+91264849,180831502,60.0,Call Forwarded - No Product,0,
+91264856,38536355,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/5aa6aa04-06:43:23-efec667e&audio_hash=merged_audio
+91156691,141827499,60.0,Manual Call,0,https://squadiq-call-recs.s3.amazonaws.com/8AJFLSCK5.mp3
+91264839,275924918,2100.0,Technical Issue - Call Not Connected,0,
+91264846,116216427,2400.0,Technical Issue - Call Not Connected,0,
+91156698,275941880,240.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/CR8JLSCK5.mp3
+91156683,275941825,2040.0,Technical Issue - Call Not Connected,0,
+91156701,76807793,2340.0,Technical Issue - Call Not Connected,0,
+91156699,272662339,60.0,Job Related_BL Not Approved,0,https://squadiq-call-recs.s3.amazonaws.com/2JGKLSCK5.mp3
+91264823,162088744,60.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/U1SD0V7L5.mp3
+91264824,28709807,60.0,No Enrichment Scope,0,
+91156705,49369312,60.0,No Enrichment Scope,0,
+91156706,user_744,60.0,Foreign or Disabled Users,0,
+91100961,248098882,60.0,Language Barrier,0,https://squadiq-call-recs.s3.amazonaws.com/G70I63YJ5.mp3
+91211483,62066143,2340.0,Technical Issue - Call Not Connected,0,
+91100966,221222281,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261006/e0e4a286-06:04:37-53cb3506&audio_hash=merged_audio
+91264827,276035094,60.0,BL Approved,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/d895b4fc-06:30:33-f8ab8500&audio_hash=merged_audio
+91264826,276034992,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/ae48bbe3-06:29:31-9c643f10&audio_hash=merged_audio
+91156704,81386415,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/1a58d899-06:42:30-d51a2d96&audio_hash=merged_audio
+91264829,276028085,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/16ddc8ef-06:30:40-dd09ab82&audio_hash=merged_audio
+91100959,9063121,2400.0,Technical Issue - Call Not Connected,0,
+91264831,190134184,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/8N7G0V7L5.mp3
+91211896,user_754,60.0,Foreign or Disabled Users,0,
+91046470,275806976,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/KM4KMMGJ5.mp3
+91211890,268889692,1920.0,Technical Issue - Call Not Connected,0,
+91046471,85858638,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/FJRKMMGJ5.mp3
+91264835,276035128,60.0,Selling Related,0,https://squadiq-call-recs.s3.amazonaws.com/YGFH0V7L5.mp3
+91156711,74290348,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/606PLSCK5.mp3
+91156712,273637278,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/4d84855f-06:43:53-352174fe&audio_hash=merged_audio
+91264838,74750963,60.0,Queue Drop,0,
+91046478,227432749,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/P3UNMMGJ5.mp3
+91156708,275941896,120.0,Technical Issue,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/b26f9be2-06:43:59-01eb0b4c&audio_hash=merged_audio
+91046477,255400614,120.0,Call Forwarded - No Product,0,
+91156717,5905862,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/AFVTLSCK5.mp3
+91264834,105706323,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/3KUG0V7L5.mp3
+91264840,104746025,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/f1c01347-06:36:35-1b6f9425&audio_hash=merged_audio
+91264841,222077919,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/XURL0V7L5.mp3
+91211479,54577282,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/109b73b4-06:19:49-85fa5cbe&audio_hash=merged_audio
+91046463,160220453,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/G7FGMMGJ5.mp3
+91211481,260052286,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/HR50RRSK5.mp3
+91046469,275847045,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/fb371822-06:24:49-eaf8a331&audio_hash=merged_audio
+91211480,221222281,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/MUIZPRSK5.mp3
+91211502,272459040,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/V28BRRSK5.mp3
+91264842,276012039,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/SRCM0V7L5.mp3
+91264843,267151783,60.0,No Enrichment Scope,0,
+91100962,254846918,2400.0,Technical Issue - Call Not Connected,0,
+91211528,96689593,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/2BXMRRSK5.mp3
+91211525,257290992,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/CHNLRRSK5.mp3
+91156703,55189844,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/L9BMLSCK5.mp3
+91264845,269498865,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/LMZM0V7L5.mp3
+91229408,245883766,60.0,No Enrichment Scope,0,
+91229413,88643807,60.0,No Enrichment Scope,0,
+91264848,229009899,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/BG7P0V7L5.mp3
+91264854,user_785,60.0,Foreign or Disabled Users,0,
+91156707,184528228,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-53f0274b-4d2a&interaction_id=20261007/dc1015a5-06:43:20-014aaa1c&audio_hash=merged_audio
+91264857,136983458,60.0,No Enrichment Scope,0,
+91156702,275941753,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/SCPLLSCK5.mp3
+91264852,276035213,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/R3NS0V7L5.mp3
+91264853,195273955,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/K0AT0V7L5.mp3
+91264855,106266228,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/AUHU0V7L5.mp3
+91156715,63649157,60.0,Particular Company Details,0,https://squadiq-call-recs.s3.amazonaws.com/RP0SLSCK5.mp3
+91156709,275941918,2220.0,Technical Issue - Call Not Connected,0,
+91264858,user_794,60.0,Foreign or Disabled Users,0,
+91264859,user_795,60.0,Foreign or Disabled Users,0,
+91264863,251365034,60.0,Queue Drop,0,
+91264865,43912555,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/E97Y0V7L5.mp3
+91264873,user_798,60.0,Foreign or Disabled Users,0,
+91264867,62228444,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/96UY0V7L5.mp3
+91264874,276035282,240.0,Particular Company Details,0,https://squadiq-call-recs.s3.amazonaws.com/DLH21V7L5.mp3
+91156718,275939779,60.0,No Enrichment Scope,0,
+91264862,user_802,60.0,Foreign or Disabled Users,0,
+91211482,275988889,120.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/CMS0RRSK5.mp3
+91264861,276035240,60.0,Call Forwarded - API Timeout,0,
+91211485,244843212,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/XCL2RRSK5.mp3
+91264866,188244176,60.0,No Enrichment Scope,0,
+91264868,user_807,60.0,Foreign or Disabled Users,0,
+91211484,68204447,2340.0,Queue Drop,0,
+91156719,128556802,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/5CGULSCK5.mp3
+91264864,130229438,60.0,Selling Related,0,https://squadiq-call-recs.s3.amazonaws.com/JCKX0V7L5.mp3
+91156716,213554499,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/KLLSLSCK5.mp3
+91156720,82957515,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/093VLSCK5.mp3
+91156725,156428518,60.0,No Enrichment Scope,0,
+91264860,211532314,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/0MRV0V7L5.mp3
+91264869,276035213,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/43FZ0V7L5.mp3
+91156722,86343910,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/P2BWLSCK5.mp3
+91156721,87267858,120.0,Selling Related,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/1f06a6bf-06:45:48-2abd4bc8&audio_hash=merged_audio
+91264870,276035272,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/NT911V7L5.mp3
+91264871,276035278,120.0,Call Forwarded - No Product,0,
+91264875,249641973,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/8I431V7L5.mp3
+91264879,188244176,60.0,No Enrichment Scope,0,
+91264876,103012264,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/028f0344-06:49:15-2aeadd07&audio_hash=merged_audio
+91156726,14111946,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/EWIXLSCK5.mp3
+91264880,user_824,60.0,Foreign or Disabled Users,0,
+91156730,275941967,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/ZKDZLSCK5.mp3
+91264872,188916218,120.0,BL Approved,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/cee858e8-06:48:20-476f03a4&audio_hash=merged_audio
+91156732,100287590,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/IB81MSCK5.mp3
+91264884,57159761,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/M5K51V7L5.mp3
+91264882,263712011,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/T8Z41V7L5.mp3
+91264883,112730681,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/01f892b9-06:50:29-9cbe886d&audio_hash=merged_audio
+91264887,275314473,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/7WE71V7L5.mp3
+91264892,181891349,60.0,Language Barrier,0,https://squadiq-call-recs.s3.amazonaws.com/LHW91V7L5.mp3
+91156710,275580582,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/B3JNLSCK5.mp3
+91264885,276035310,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/H2761V7L5.mp3
+91156714,268155900,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/WTDRLSCK5.mp3
+91156713,99649538,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/1XSPLSCK5.mp3
+91264888,192075358,60.0,Particular Company Details,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/aff3889a-06:51:52-6b67b34d&audio_hash=merged_audio
+91211488,199356150,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/G3G4RRSK5.mp3
+91264890,130940052,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/XNM81V7L5.mp3
+91156771,142811434,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/0204022c-06:53:31-2cd5f0a3&audio_hash=merged_audio
+91156780,121750962,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/68249d69-06:56:46-b7ce247b&audio_hash=merged_audio
+91211490,275964429,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/6XN5RRSK5.mp3
+91211487,268008860,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/ad88f87c-06:23:32-b37c150b&audio_hash=merged_audio
+91211494,141318257,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/RLI7RRSK5.mp3
+91211496,275988929,60.0,Foreign or Disabled Users,0,
+91264889,136782762,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/2T181V7L5.mp3
+91264893,275847875,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/GEHA1V7L5.mp3
+91211489,198407395,240.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/B035RRSK5.mp3
+91211497,233600074,2040.0,Technical Issue - Call Not Connected,0,
+91211486,133541368,2280.0,Queue Drop,0,
+91264886,115331670,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/CZT61V7L5.mp3
+91233932,249861913,60.0,Abruptly Disconnected Call,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/d7f8eb2a-13:43:17-700bdb2a&audio_hash=merged_audio
+91233945,275642604,60.0,No Enrichment Scope,0,
+91264894,151206377,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/68RB1V7L5.mp3
+91264891,276035335,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/SK991V7L5.mp3
+91264901,276035376,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/VD9H1V7L5.mp3
+91264897,276028206,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/KV6E1V7L5.mp3
+91264909,3566479,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/4YBK1V7L5.mp3
+91264907,71807383,60.0,Manual Call,0,https://squadiq-call-recs.s3.amazonaws.com/91RJ1V7L5.mp3
+91264895,219679347,240.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/W1ZC1V7L5.mp3
+91264896,32192399,2160.0,Technical Issue - Call Not Connected,0,
+91100963,221222281,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/618J63YJ5.mp3
+91100967,53993076,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/RR2L63YJ5.mp3
+91046476,219007246,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/0AKMMMGJ5.mp3
+91211492,273034752,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/1UA6RRSK5.mp3
+91264900,42803959,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/0HMG1V7L5.mp3
+91156723,146452829,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/JZXWLSCK5.mp3
+91211493,221509683,2100.0,Technical Issue - Call Not Connected,0,
+91264902,123825342,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/2248f27a-06:55:16-edb295a6&audio_hash=merged_audio
+91156728,100227959,60.0,No Product Requirement,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-53f0274b-4d2a&interaction_id=20261007/8e9e7f9c-06:47:24-399d939b&audio_hash=merged_audio
+91264906,276035383,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/E44J1V7L5.mp3
+91264908,200213284,60.0,No Enrichment Scope,0,
+91264903,251365034,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/PAWH1V7L5.mp3
+91046487,user_874,60.0,Foreign or Disabled Users,0,
+91156735,84419334,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/3233MSCK5.mp3
+91046484,64054940,1860.0,Queue Drop,0,
+91156739,16196339,60.0,No Enrichment Scope,0,
+91264912,276035340,60.0,No Enrichment Scope,0,
+91156731,275941963,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/NEL0MSCK5.mp3
+91156742,267485278,60.0,No Enrichment Scope,0,
+91264910,103012264,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/ZUYK1V7L5.mp3
+91264920,276035419,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/8D1P1V7L5.mp3
+91264914,273636284,60.0,BL Approved,1,https://squadiq-call-recs.s3.amazonaws.com/NM6M1V7L5.mp3
+91264922,10540436,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/87373e19-06:59:10-e8923314&audio_hash=merged_audio
+91264924,115879276,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/Y69R1V7L5.mp3
+91264921,23205740,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-53f0274b-4d2a&interaction_id=20261009/0f006c92-06:59:03-10aa4000&audio_hash=merged_audio
+91264923,162730851,120.0,Queue Drop,0,
+91264925,276035426,180.0,Particular Company Details,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/fb371822-06:59:37-24272244&audio_hash=merged_audio
+91264928,153076900,180.0,BL Approved,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-53f0274b-4d2a&interaction_id=20261009/ecf94c56-07:00:25-9cd466e4&audio_hash=merged_audio
+91264904,276035383,2100.0,Queue Drop,0,
+91211491,8816274,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/a04aa5ab-06:24:07-deba870e&audio_hash=merged_audio
+91046473,201653649,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/5DZLMMGJ5.mp3
+91211495,148274731,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/KI58RRSK5.mp3
+91046472,275847092,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/AGCLMMGJ5.mp3
+91156736,275941779,60.0,No Enrichment Scope,0,
+91211498,85335613,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/590ARRSK5.mp3
+91264913,27143929,60.0,No Enrichment Scope,0,
+91100965,156231095,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/WUFK63YJ5.mp3
+91211500,66382917,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/06LARRSK5.mp3
+91156733,244159918,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/D8V1MSCK5.mp3
+91156738,275941779,60.0,No Enrichment Scope,0,
+91211506,89579914,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/JWFCRRSK5.mp3
+91211505,50794891,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/PZUBRRSK5.mp3
+91156744,user_904,60.0,Foreign or Disabled Users,0,
+91264916,user_905,60.0,Foreign or Disabled Users,0,
+91211510,247372786,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/4LAERRSK5.mp3
+91211507,264604662,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/ET2DRRSK5.mp3
+91156745,120511199,60.0,Queue Drop,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/096d0a4e-06:49:40-3a607e68&audio_hash=merged_audio
+91211509,74061882,120.0,Abruptly Disconnected Call,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/a1645f0a-06:30:32-198dad11&audio_hash=merged_audio
+91264919,200213284,60.0,No Enrichment Scope,0,
+91156734,223089374,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/85G2MSCK5.mp3
+91264917,115879276,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/IJTM1V7L5.mp3
+91156746,267485278,60.0,No Enrichment Scope,0,
+91264911,142611731,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/URJL1V7L5.mp3
+91264915,181096996,60.0,Selling Related,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/cc47d605-06:58:05-98e0fb60&audio_hash=merged_audio
+91264918,151206377,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/DGEN1V7L5.mp3
+91156749,275329948,120.0,Language Barrier,0,https://squadiq-call-recs.s3.amazonaws.com/MSX4MSCK5.mp3
+91156748,275934628,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-53f0274b-4d2a&interaction_id=20261007/23b64e17-06:50:16-1be65339&audio_hash=merged_audio
+91264927,273636284,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/M0HS1V7L5.mp3
+91264926,252475602,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/T3WR1V7L5.mp3
+91264933,249717369,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/XIJV1V7L5.mp3
+91156724,223984314,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/6839d19f-06:46:31-3c550b24&audio_hash=merged_audio
+91100964,275894283,180.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/1YUJ63YJ5.mp3
+91156729,275941957,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/4PSYLSCK5.mp3
+91156727,113788548,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/9T5YLSCK5.mp3
+91156737,247283082,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/cc806ee6-06:49:00-945fa9f4&audio_hash=merged_audio
+91046482,140833274,60.0,No Enrichment Scope,0,
+91211499,262842539,60.0,No Enrichment Scope,0,
+91156740,275941984,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/YYN3MSCK5.mp3
+91211501,30771964,60.0,No Enrichment Scope,0,
+91156741,275942002,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/TVA4MSCK5.mp3
+91211503,262842539,60.0,No Enrichment Scope,0,
+91156750,66402570,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/71c1ac2a-06:50:45-a5920bcd&audio_hash=merged_audio
+91264931,222163375,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/7RBU1V7L5.mp3
+91264938,86383248,60.0,No Enrichment Scope,0,
+91264942,user_936,60.0,Foreign or Disabled Users,0,
+91264932,183039045,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/2MYU1V7L5.mp3
+91264935,78337080,180.0,Abruptly Disconnected Call,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/a1687656-07:01:56-fe3baaab&audio_hash=merged_audio
+91264940,134053544,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/G9EX1V7L5.mp3
+91264948,25457719,60.0,No Enrichment Scope,0,
+91264941,276035335,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/B61Y1V7L5.mp3
+91264945,275975641,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/WWVZ1V7L5.mp3
+91264947,90646776,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/KP312V7L5.mp3
+91264946,276035439,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/RTG02V7L5.mp3
+91265483,109857701,60.0,No Enrichment Scope,0,
+91265491,106846026,60.0,No Enrichment Scope,0,
+91265496,119009201,60.0,No Enrichment Scope,0,
+91046474,275845770,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/dfbec598-06:26:17-771d7f99&audio_hash=merged_audio
+91063516,275859741,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/141FSJLJ5.mp3
+91156743,270962379,60.0,Foreign or Disabled Users,0,
+91156747,275896244,60.0,No Enrichment Scope,0,
+91264936,86383248,60.0,No Enrichment Scope,0,
+91156751,223984314,60.0,No Enrichment Scope,0,
+91156752,275344536,60.0,Foreign or Disabled Users,0,
+91156756,275942028,60.0,Foreign or Disabled Users,0,
+91156757,275759583,60.0,No Enrichment Scope,0,
+91264937,56265956,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/LCTW1V7L5.mp3
+91156761,241308751,60.0,No Enrichment Scope,0,
+91264934,219679347,120.0,Particular Company Details,0,https://squadiq-call-recs.s3.amazonaws.com/SF6W1V7L5.mp3
+91264939,97498269,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/096d0a4e-07:03:00-15212592&audio_hash=merged_audio
+91264944,163870294,60.0,Particular Company Details,0,https://squadiq-call-recs.s3.amazonaws.com/63MY1V7L5.mp3
+91264943,222163375,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-53f0274b-4d2a&interaction_id=20261009/5ae9db89-07:03:36-76d1c161&audio_hash=merged_audio
+91156753,32147282,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/HNI5MSCK5.mp3
+91156765,254013494,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/G1V9MSCK5.mp3
+91156758,35406657,60.0,Particular Company Details,0,https://squadiq-call-recs.s3.amazonaws.com/2ED7MSCK5.mp3
+91156768,275896244,60.0,No Enrichment Scope,0,
+91156774,54310773,60.0,No Product Requirement,0,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-53f0274b-4d2a&interaction_id=20261007/8b0bb839-06:53:45-70bf286d&audio_hash=merged_audio
+91156763,224274638,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/S7L8MSCK5.mp3
+91264951,24818735,60.0,Particular Company Details,0,https://squadiq-call-recs.s3.amazonaws.com/5FY22V7L5.mp3
+91264958,224434304,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/9WL62V7L5.mp3
+91264952,275834996,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/0CJ32V7L5.mp3
+91264954,276035521,300.0,Call Forwarded - No Product,0,
+91156781,user_973,60.0,Foreign or Disabled Users,0,
+91156782,user_974,60.0,Foreign or Disabled Users,0,
+91264956,92522692,2040.0,Queue Drop,0,
+91156778,54310773,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/61a4c628-06:54:45-bdc13474&audio_hash=merged_audio
+91156789,134630778,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/6feeef0d-06:56:27-16118d7f&audio_hash=merged_audio
+91156762,275942032,2280.0,Technical Issue - Call Not Connected,0,
+91264930,93456293,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/CUPT1V7L5.mp3
+91264979,275922265,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-53f0274b-4d2a&interaction_id=20261009/38d396b4-07:09:06-f4f65617&audio_hash=merged_audio
+91264966,134573335,180.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261009/62829e5e-07:08:08-c4cd33a3&audio_hash=merged_audio
+91156759,275759583,60.0,No Enrichment Scope,0,
+91211508,119190338,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/ac0e92e3-06:29:58-d8ebe3dc&audio_hash=merged_audio
+91046485,275847141,60.0,Abruptly Disconnected Call,0,https://squadiq-call-recs.s3.amazonaws.com/EX1RMMGJ5.mp3
+91046483,275845984,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261005/83a28512-06:29:21-994e58e2&audio_hash=merged_audio
+91156755,40500386,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/7HS6MSCK5.mp3
+91046488,64054940,60.0,Call Forwarded,0,
+91211511,52319743,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/ZHXERRSK5.mp3
+91046497,181410416,60.0,No Enrichment Scope,0,
+91156764,275941972,60.0,No Product Requirement,0,https://squadiq-call-recs.s3.amazonaws.com/L489MSCK5.mp3
+91211518,247372786,60.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/f22d3393-06:32:21-ec8cbf5b&audio_hash=merged_audio
+91211519,user_992,60.0,Foreign or Disabled Users,0,
+91211513,149245086,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261008/6a098b73-06:31:52-a7354da5&audio_hash=merged_audio
+91156772,241308751,60.0,No Enrichment Scope,0,
+91211514,275988986,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/I8SGRRSK5.mp3
+91156766,72105392,120.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/BYFAMSCK5.mp3
+91211517,275988989,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/820IRRSK5.mp3
+91156770,113788548,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/1SNBMSCK5.mp3
+91156769,275942045,120.0,BL Enriched,1,https://agents.sarvam.ai/media?org_id=indiamart.com&workspace_id=indiamart-com-defa-22f36d&app_id=Indiamart-B-62930b50-1550&interaction_id=20261007/13c08f31-06:53:13-0c80ca18&audio_hash=merged_audio
+91211515,138173310,60.0,BL Enriched,1,https://squadiq-call-recs.s3.amazonaws.com/D5DHRRSK5.mp3
