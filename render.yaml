@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: voice-ai-ab-testing
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: AB_TEST_DB_PATH
+        value: /data/voice_ab.db
+    disk:
+      name: sqlite-data
+      mountPath: /data
+      sizeGB: 1
