@@ -1,12 +1,22 @@
 from typing import Tuple, Dict, Any
 import numpy as np
+from scipy.stats import beta as beta_distribution
 
 class StatisticalEngine:
     """
     Statistical engine for evaluating Voice AI A/B testing winners and guardrails.
-    [STUB / FOUNDATION LAYER]: Implements standard Bayesian Monte Carlo sampling
-    with uniform Beta prior, sample sizing, and SPRT guardrail skeleton.
+    Beta-Binomial Bayesian posterior calculations and duration guardrail helpers.
     """
+
+    @staticmethod
+    def conversion_credible_interval(successes: int, total: int, level: float = 0.95) -> Tuple[float, float]:
+        """Equal-tailed Beta posterior interval under the same Beta(1,1) prior."""
+        if total <= 0:
+            return (0.0, 1.0)
+        tail = (1.0 - level) / 2.0
+        lower = beta_distribution.ppf(tail, 1 + successes, 1 + total - successes)
+        upper = beta_distribution.ppf(1.0 - tail, 1 + successes, 1 + total - successes)
+        return round(float(lower), 4), round(float(upper), 4)
 
     @staticmethod
     def compute_bayesian_win_probability(
@@ -31,22 +41,23 @@ class StatisticalEngine:
         beta_b = 1 + (total_b - success_b)
 
         # Draw Monte Carlo samples
-        samples_a = np.random.beta(alpha_a, beta_a, size=n_samples)
-        samples_b = np.random.beta(alpha_b, beta_b, size=n_samples)
+        seed = (success_a * 73856093 + total_a * 19349663 + success_b * 83492791 + total_b * 2654435761) % (2 ** 32)
+        rng = np.random.default_rng(seed)
+        samples_a = rng.beta(alpha_a, beta_a, size=n_samples)
+        samples_b = rng.beta(alpha_b, beta_b, size=n_samples)
 
         # Fraction of times B's conversion probability was strictly greater than A's
         p_b_wins = float(np.mean(samples_b > samples_a))
         return round(p_b_wins, 4)
 
     @staticmethod
-    def check_guardrail_sprt(
+    def check_duration_guardrail(
         duration_a: float,
         duration_b: float,
         max_allowed_delta: float = 30.0
     ) -> Tuple[bool, str]:
         """
-        [STUB]: Checks whether the secondary guardrail (Call Duration) has breached
-        acceptable boundaries.
+        Checks whether the duration guardrail has breached its configured boundary.
         Returns: (is_safe: bool, reason: str)
         """
         delta = duration_b - duration_a

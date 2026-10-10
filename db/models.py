@@ -27,11 +27,14 @@ class ExperimentModel(Base):
     min_sample_per_variant = Column(Integer, default=100, nullable=False)
     confidence_level = Column(Float, default=0.95, nullable=False)
     primary_metric = Column(String(64), default="meeting_fixed_rate", nullable=False)
+    primary_disposition = Column(String(128), default="BL Enriched", nullable=False)
     secondary_metric = Column(String(64), default="avg_call_duration_sec", nullable=False)
     guardrail_max_delta = Column(Float, default=30.0, nullable=False) # e.g. max allowed sec duration rise
     early_stop_threshold = Column(Float, default=0.01, nullable=False) # P(B>A) <= 0.01
 
     created_at = Column(DateTime, default=datetime.datetime.utcnow, nullable=False)
+    started_at = Column(DateTime, nullable=True)
+    deployed_variant_key = Column(String(8), nullable=True)
     updated_at = Column(DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
     concluded_at = Column(DateTime, nullable=True)
 
@@ -65,6 +68,7 @@ class CallEventModel(Base):
     
     disposition = Column(String(64), nullable=False)
     call_duration_sec = Column(Float, nullable=False)
+    duration_observed = Column(Boolean, default=False, nullable=False)
     meeting_fixed = Column(Integer, default=0, nullable=False) # 1 if meeting fixed else 0
 
     experiment = relationship("ExperimentModel", back_populates="events")

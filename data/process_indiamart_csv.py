@@ -10,18 +10,18 @@ uses the same caller key on every replay.
 """
 
 import csv
-import datetime as dt
+import math
 import re
 import sys
 from pathlib import Path
 from typing import Any, Dict, Optional
 
 
-DEFAULT_DURATION_SEC = 60.0
 OUTPUT_FIELDS = [
     "call_id",
     "caller_id",
     "call_duration_sec",
+    "call_duration_observed",
     "disposition",
     "meeting_fixed",
     "recording_url",
@@ -38,12 +38,16 @@ def normalize_identifier(value: Optional[str]) -> str:
     return value
 
 
-def parse_datetime(dt_str: Optional[str]) -> Optional[dt.datetime]:
-    if not dt_str or not dt_str.strip():
-        return None
-    for fmt in ("%d/%m/%y %H:%M", "%d/%m/%Y %H:%M", "%d/%m/%y %H:%M:%S"):
+def parse_call_duration(row: Dict[str, str]) -> Optional[float]:
+    """Read only an explicit duration field; record timestamps are not call length."""
+    for key in ("call_duration_sec", "call_duration_seconds", "duration_seconds", "call_duration"):
+        raw = (row.get(key) or "").strip()
+        if not raw:
+            continue
         try:
-            return dt.datetime.strptime(dt_str.strip(), fmt)
+            value = float(raw)
+            if math.isfinite(value) and value >= 0:
+                return value
         except ValueError:
             continue
     return None
@@ -64,14 +68,8 @@ def transform_indiamart_row(row: Dict[str, str], index: int) -> Dict[str, Any]:
     # These are the successful business outcomes in the IndiaMART export.
     is_converted = int(bool(re.search(r"\bbl\s+(approved|enriched|generated)\b", remarks, re.I)))
 
-    start_dt = parse_datetime(row.get("entered_on"))
-    end_dt = parse_datetime(row.get("last_modified_date"))
-    if start_dt and end_dt and end_dt >= start_dt:
-        duration_sec = (end_dt - start_dt).total_seconds()
-        if duration_sec == 0:
-            duration_sec = DEFAULT_DURATION_SEC
-    else:
-        duration_sec = DEFAULT_DURATION_SEC
+    duration_sec = parse_call_duration(row)
+    duration_observed = duration_sec is not None
 
     recording_url = row.get("call_recording_url", "").strip()
 
@@ -79,6 +77,7 @@ def transform_indiamart_row(row: Dict[str, str], index: int) -> Dict[str, Any]:
         "call_id": call_id,
         "caller_id": caller_id,
         "call_duration_sec": duration_sec,
+        "call_duration_observed": int(duration_observed),
         "disposition": remarks,
         "meeting_fixed": is_converted,
         "recording_url": recording_url

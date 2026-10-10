@@ -19,6 +19,7 @@ class ExperimentRepository:
         min_sample_per_variant: int = 100,
         confidence_level: float = 0.95,
         primary_metric: str = "meeting_fixed_rate",
+        primary_disposition: str = "BL Enriched",
         secondary_metric: str = "avg_call_duration_sec",
         guardrail_max_delta: float = 30.0,
         early_stop_threshold: float = 0.01,
@@ -33,6 +34,7 @@ class ExperimentRepository:
             min_sample_per_variant=min_sample_per_variant,
             confidence_level=confidence_level,
             primary_metric=primary_metric,
+            primary_disposition=primary_disposition,
             secondary_metric=secondary_metric,
             guardrail_max_delta=guardrail_max_delta,
             early_stop_threshold=early_stop_threshold,
@@ -51,7 +53,11 @@ class ExperimentRepository:
             )
             self.db.add(variant)
 
-        self.add_audit_log(exp_id, "CREATED", {"config": {"name": name, "variants": [v["key"] for v in variants_data]}})
+        self.add_audit_log(exp_id, "CREATED", {"config": {
+            "name": name,
+            "variants": [v["key"] for v in variants_data],
+            "primary_disposition": primary_disposition,
+        }})
         self.db.commit()
         self.db.refresh(exp)
         return exp
@@ -62,20 +68,27 @@ class ExperimentRepository:
     def list_experiments(self) -> List[ExperimentModel]:
         return self.db.query(ExperimentModel).order_by(ExperimentModel.created_at.desc()).all()
 
-    def update_status(self, exp_id: str, new_status: ExperimentStatus, reason: Optional[str] = None) -> Optional[ExperimentModel]:
+    def update_status(self, exp_id: str, new_status: ExperimentStatus, reason: Optional[str] = None,
+                      promoted_variant_key: Optional[str] = None,
+                      decision_evidence: Optional[Dict[str, Any]] = None) -> Optional[ExperimentModel]:
         exp = self.get_experiment(exp_id)
         if not exp:
             return None
         
         old_status = exp.status
         exp.status = new_status.value
+        if new_status == ExperimentStatus.RUNNING and exp.started_at is None:
+            exp.started_at = datetime.datetime.utcnow()
+        if promoted_variant_key is not None:
+            exp.deployed_variant_key = promoted_variant_key
         if new_status in [ExperimentStatus.CONCLUDED, ExperimentStatus.STOPPED_EARLY]:
             exp.concluded_at = datetime.datetime.utcnow()
 
         self.add_audit_log(
             exp_id, 
             f"STATUS_CHANGE_{new_status.value}", 
-            {"old_status": old_status, "new_status": new_status.value, "reason": reason}
+            {"old_status": old_status, "new_status": new_status.value, "reason": reason,
+             "evidence": decision_evidence}
         )
         self.db.commit()
         self.db.refresh(exp)
@@ -125,3 +138,9 @@ class ExperimentRepository:
         if variant_key:
             query = query.filter(CallEventModel.variant_key == variant_key)
         return query.order_by(CallEventModel.timestamp.asc()).all()
+
+    def get_event_by_call_id(self, experiment_id: str, call_id: str) -> Optional[CallEventModel]:
+        return self.db.query(CallEventModel).filter(
+            CallEventModel.experiment_id == experiment_id,
+            CallEventModel.call_id == call_id,
+        ).first()

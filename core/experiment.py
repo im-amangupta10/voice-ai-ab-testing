@@ -31,11 +31,16 @@ class ExperimentCreate(BaseModel):
     
     window_hours: int = Field(default=48, ge=1, description="Duration in hours to run test")
     min_sample_per_variant: int = Field(default=100, ge=5, description="Minimum calls required per variant before declaring winner")
-    confidence_level: float = Field(default=0.95, ge=0.80, le=0.999)
+    challenger_traffic_weight: float = Field(default=0.10, gt=0.0, lt=1.0,
+                                             description="Variant B share when the server generates the challenger")
+    confidence_level: float = Field(default=0.95, ge=0.80, le=0.999,
+                                   description="Posterior P(B > A) promotion threshold")
     primary_metric: str = Field(default="meeting_fixed_rate")
+    primary_disposition: str = Field(default="BL Enriched", min_length=1, description="CSV disposition counted as a primary success")
     secondary_metric: str = Field(default="avg_call_duration_sec")
     guardrail_max_delta: float = Field(default=30.0, description="Max allowed increase in secondary metric")
-    early_stop_threshold: float = Field(default=0.01, description="Threshold below which B is considered harmful")
+    early_stop_threshold: float = Field(default=0.01, ge=0.0, le=0.2,
+                                        description="Posterior P(B > A) threshold for early stop")
 
     @model_validator(mode="after")
     def validate_variants_and_weights(self):
@@ -58,6 +63,7 @@ class ExperimentResponse(BaseModel):
     min_sample_per_variant: int
     confidence_level: float
     primary_metric: str
+    primary_disposition: str
     secondary_metric: str
     guardrail_max_delta: float
     early_stop_threshold: float

@@ -1,6 +1,7 @@
 import uuid
 from typing import List
 from fastapi import APIRouter, Depends, HTTPException, status
+from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 from db.connection import get_db
 from db.repository import ExperimentRepository
@@ -15,6 +16,27 @@ from core.decision import DecisionEngine
 from core.prompts import generate_challenger_prompt
 
 router = APIRouter(prefix="/experiments", tags=["Experiments"])
+
+
+class PrimaryGoalUpdate(BaseModel):
+    primary_disposition: str = Field(..., min_length=1, max_length=128)
+
+
+@router.patch("/{experiment_id}/goal")
+def update_primary_goal(experiment_id: str, update: PrimaryGoalUpdate, db: Session = Depends(get_db)):
+    repo = ExperimentRepository(db)
+    exp = repo.get_experiment(experiment_id)
+    if not exp:
+        raise HTTPException(status_code=404, detail="Experiment not found.")
+    goal = update.primary_disposition.strip()
+    if not goal:
+        raise HTTPException(status_code=422, detail="Primary disposition cannot be blank.")
+    previous = exp.primary_disposition
+    exp.primary_disposition = goal
+    repo.add_audit_log(experiment_id, "PRIMARY_GOAL_UPDATED", {"previous": previous, "primary_disposition": goal})
+    db.commit()
+    db.refresh(exp)
+    return {"experiment_id": exp.id, "primary_disposition": exp.primary_disposition, "message": "Primary goal saved."}
 
 @router.post("", response_model=ExperimentResponse, status_code=status.HTTP_201_CREATED)
 def create_experiment(payload: ExperimentCreate, db: Session = Depends(get_db)):
@@ -33,9 +55,9 @@ def create_experiment(payload: ExperimentCreate, db: Session = Depends(get_db)):
             "name": "Challenger (generated)",
             "variant_type": "FULL_PROMPT",
             "content": generate_challenger_prompt(payload.base_prompt, seed=exp_id),
-            "traffic_weight": 0.10,
+            "traffic_weight": payload.challenger_traffic_weight,
         })
-        variants_data[0]["traffic_weight"] = 0.90
+        variants_data[0]["traffic_weight"] = 1.0 - payload.challenger_traffic_weight
     exp = repo.create_experiment(
         exp_id=exp_id,
         name=payload.name,
@@ -46,6 +68,7 @@ def create_experiment(payload: ExperimentCreate, db: Session = Depends(get_db)):
         min_sample_per_variant=payload.min_sample_per_variant,
         confidence_level=payload.confidence_level,
         primary_metric=payload.primary_metric,
+        primary_disposition=payload.primary_disposition,
         secondary_metric=payload.secondary_metric,
         guardrail_max_delta=payload.guardrail_max_delta,
         early_stop_threshold=payload.early_stop_threshold,
@@ -84,7 +107,11 @@ def update_experiment_status(
     if not target_status:
         raise HTTPException(status_code=400, detail=f"Invalid action '{update.action}'.")
 
-    exp = repo.update_status(experiment_id, target_status, reason=update.reason)
+    deployed_variant = "B" if update.action.upper() == "PROMOTE_B" else (
+        "A" if update.action.upper() in {"STOP_EARLY", "CONCLUDE", "PAUSE"} else None
+    )
+    exp = repo.update_status(experiment_id, target_status, reason=update.reason,
+                             promoted_variant_key=deployed_variant)
     if not exp:
         raise HTTPException(status_code=404, detail="Experiment not found.")
     return {"message": f"Status updated to {exp.status}", "experiment_id": exp.id, "status": exp.status}
